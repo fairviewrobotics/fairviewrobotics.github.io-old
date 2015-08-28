@@ -7,7 +7,7 @@
 body {
     width: 100%;
     height: 100%;
-    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
     background-color: #000;
 }
@@ -147,7 +147,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    background: url(https://googledrive.com/host/0B2feaI15SrcFfkZyUFpuZFE5V3dBTnpiNnNpcHVVdXpkMWRuM2hlY2FtbTZOZzc0eXZ5Ykk/2015_robot_edit.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -165,7 +165,17 @@ a:focus {
 }
 
 .intro .intro-body .intro-text {
-    font-size: 18px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.outline-text {
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
 }
 
 @media(min-width:768px) {
@@ -261,7 +271,48 @@ a:focus {
     padding-top: 100px;
 }
 
-.download-section {
+.about-section {
+    width: 100%;
+    padding: 50px 0;
+    color: #fff;
+    background-color: #000;
+    background: url(https://googledrive.com/host/0B2feaI15SrcFfkZyUFpuZFE5V3dBTnpiNnNpcHVVdXpkMWRuM2hlY2FtbTZOZzc0eXZ5Ykk/2014_team_edit.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.gallery-section {
+    width: 100%;
+    padding: 50px 0;
+    color: #fff;
+    background-color: #000;
+    background: url(https://googledrive.com/host/0B2feaI15SrcFfkZyUFpuZFE5V3dBTnpiNnNpcHVVdXpkMWRuM2hlY2FtbTZOZzc0eXZ5Ykk/2014_team_edit.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+div.gallery-image {
+    background: #242424;
+    padding: 10px;
+}
+
+.team-section {
+    width: 100%;
+    padding: 50px 0;
+    color: #fff;
+    background-color: #000;
+    background: url(https://googledrive.com/host/0B2feaI15SrcFfkZyUFpuZFE5V3dBTnpiNnNpcHVVdXpkMWRuM2hlY2FtbTZOZzc0eXZ5Ykk/2015_robot_work.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.download-section{
     width: 100%;
     padding: 50px 0;
     color: #fff;
@@ -374,4 +425,11 @@ body {
 
 .modal {
     color: black;
+}
+
+.captain-profile {
+    color: #fff;
+    background-color: #242424;
+    margin: 10px;
+    padding: 10px;
 }

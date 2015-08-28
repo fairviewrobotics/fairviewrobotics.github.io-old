@@ -53,10 +53,16 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll outline-text" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll outline-text" href="#team">Our Team</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll outline-text" href="#gallery">Gallery</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll outline-text" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -71,9 +77,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <!--<h1 class="brand-heading"></h1>-->
-						<img class="brand-heading" src="img/logo.svg"></img>
-                        <p class="intro-text">THE BEST EVER<br>(4 REAL)</p>
+						<img class="brand-heading" src="img/logo.svg">
+                        <p></p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
@@ -83,15 +88,127 @@
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About the Black Knights</h2>
-                <p>The Black Knights is the robotics team for Fairview High School in Boulder, Colorado.</p>
-                <p>We compete anually in the <a href="http://www.usfirst.org/roboticsprograms/frc">First Robotics Competition</a>.</p>
-                <p></p>
-                <p></p>
+    <!-- Overview Section -->
+    <section id="about" class="content-section text-center">
+        <div class="about-section">
+            <div class="container">
+                <h2>About Fairview Robotics</h2>
+                <p>Founded in 2007, Fairview Robotics, or the Black Knights, are dedicated to developing and building robots.</p>
+                <p>We compete anually in the <a href="http://www.usfirst.org/roboticsprograms/frc">FIRST Robotics Competition</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team section -->
+    <section id="team" class="content-section text-center">
+        <div class="team-section">
+            <div class="container">
+                <h2>Our Team</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="captain-profile">
+                            <p><img src="http://blog.ramboll.com/fehmarnbelt/wp-content/themes/ramboll2/images/profile-img.jpg" width="100%"></img></p>
+                            <h3>Captain 1</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada metus eget ligula gravida ullamcorper. Nunc finibus consequat ex sit amet venenatis. Donec in fermentum.</p>
+                            <a data-toggle="modal" data-target="#captainmodal1" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-new-window"></span> Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="captain-profile">
+                            <p><img src="http://blog.ramboll.com/fehmarnbelt/wp-content/themes/ramboll2/images/profile-img.jpg" width="100%"></img></p>
+                            <h3>Captain 2</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada metus eget ligula gravida ullamcorper. Nunc finibus consequat ex sit amet venenatis. Donec in fermentum.</p>
+                            <a data-toggle="modal" data-target="#captainmodal2" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-new-window"></span> Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="captain-profile">
+                            <p><img src="http://blog.ramboll.com/fehmarnbelt/wp-content/themes/ramboll2/images/profile-img.jpg" width="100%"></img></p>
+                            <h3>Communications Officer</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada metus eget ligula gravida ullamcorper. Nunc finibus consequat ex sit amet venenatis. Donec in fermentum.</p>
+                            <a data-toggle="modal" data-target="#captainmodal3" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-new-window"></span> Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Captain Profile Modals -->
+    <div id="captainmodal1" class="modal fade" role="dialog" aria-labelledby="captainModalLabel1" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="captainModalLabel1">Captain 1</h4>
+                </div>
+                <div class="modal-body">
+                    <p><img src="http://blog.ramboll.com/fehmarnbelt/wp-content/themes/ramboll2/images/profile-img.jpg" width="100%"></img></p>
+                    <h3>Captain 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices molestie tortor sit amet bibendum. Nulla ultricies ipsum eu quam consequat porttitor in ac massa. Maecenas sodales metus dui. Etiam augue justo, dictum quis est id, sagittis cursus velit. Maecenas id urna elit. Sed hendrerit est in turpis ultrices ullamcorper. Cras molestie, leo in viverra lacinia, justo felis fringilla ipsum, eget consequat felis risus non ligula. Proin porta magna risus, eget faucibus nisl dignissim eu.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="captainmodal2" class="modal fade" role="dialog" aria-labelledby="captainModalLabel1" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="captainModalLabel1">Captain 2</h4>
+                </div>
+                <div class="modal-body">
+                    <p><img src="http://blog.ramboll.com/fehmarnbelt/wp-content/themes/ramboll2/images/profile-img.jpg" width="100%"></img></p>
+                    <h3>Captain 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices molestie tortor sit amet bibendum. Nulla ultricies ipsum eu quam consequat porttitor in ac massa. Maecenas sodales metus dui. Etiam augue justo, dictum quis est id, sagittis cursus velit. Maecenas id urna elit. Sed hendrerit est in turpis ultrices ullamcorper. Cras molestie, leo in viverra lacinia, justo felis fringilla ipsum, eget consequat felis risus non ligula. Proin porta magna risus, eget faucibus nisl dignissim eu.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="captainmodal3" class="modal fade" role="dialog" aria-labelledby="captainModalLabel1" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="captainModalLabel1">Communications Officer</h4>
+                </div>
+                <div class="modal-body">
+                    <p><img src="http://blog.ramboll.com/fehmarnbelt/wp-content/themes/ramboll2/images/profile-img.jpg" width="100%"></img></p>
+                    <h3>Communications Officer</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices molestie tortor sit amet bibendum. Nulla ultricies ipsum eu quam consequat porttitor in ac massa. Maecenas sodales metus dui. Etiam augue justo, dictum quis est id, sagittis cursus velit. Maecenas id urna elit. Sed hendrerit est in turpis ultrices ullamcorper. Cras molestie, leo in viverra lacinia, justo felis fringilla ipsum, eget consequat felis risus non ligula. Proin porta magna risus, eget faucibus nisl dignissim eu.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overview Section -->
+    <section id="gallery" class="content-section text-center">
+        <div class="gallery-section">
+            <div class="container">
+                <h2>Gallery</h2>
+                <div class="row">
+                    <div class="col-lg-3 gallery-image">
+                        <img src="http://blog.ramboll.com/fehmarnbelt/wp-content/themes/ramboll2/images/profile-img.jpg" width="100%">
+                    </div>
+                    <div class="col-lg-3 gallery-image">
+                        <img src="http://blog.ramboll.com/fehmarnbelt/wp-content/themes/ramboll2/images/profile-img.jpg" width="100%">
+                    </div>
+                    <div class="col-lg-3 gallery-image">
+                        <img src="http://blog.ramboll.com/fehmarnbelt/wp-content/themes/ramboll2/images/profile-img.jpg" width="100%">
+                    </div>
+                    <div class="col-lg-3 gallery-image">
+                        <img src="http://blog.ramboll.com/fehmarnbelt/wp-content/themes/ramboll2/images/profile-img.jpg" width="100%">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -118,14 +235,20 @@
                 <p><a href="mailto:fairviewrobotics@gmail.com">fairviewrobotics@gmail.com</a>
                 </p>
                 <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a data-toggle="modal" data-target="#emailModal" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-envelope"></span> <span class="network-name">Email</span></a>
+                    </li>
                     <!--<li>
-                        <a href="" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                        <a href="https://www.facebook.com/pages/FRC-Team-2036-Black-Knights/192602367548617" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-thumbs-up"></span> <span class="network-name">Facebook</span></a>
                     </li>-->
                     <li>
-                        <a data-toggle="modal" data-target="#emailModal" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-envelope"></span> Email</a>
+                        <a href="https://twitter.com/FHSKnights2036" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                     </li>
                     <li>
-                        <a href="https://github.com/fairviewrobotics" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                        <a href="https://www.youtube.com/user/FairviewRobotics2036" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-expand"></span> <span class="network-name">Youtube</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/fairviewrobotics" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                     </li>
                     <!--<li>
                         <a href="" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
