@@ -276,7 +276,7 @@ a:focus {
     padding: 50px 0;
     color: #fff;
     background-color: #000;
-    background: url(../img/2014_team_edit.jpg) no-repeat center center scroll;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/2014_team_edit.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
