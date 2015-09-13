@@ -276,28 +276,23 @@ a:focus {
     padding: 50px 0;
     color: #fff;
     background-color: #000;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/2014_team_edit.jpg) no-repeat center center scroll;
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../img/2014_team_edit.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
-.gallery-section {
+.calendar-section {
     width: 100%;
     padding: 50px 0;
     color: #fff;
     background-color: #000;
-    background: url(../img/2014_team_edit.jpg) no-repeat center center scroll;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/2015_robot_edit.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-}
-
-div.gallery-image {
-    background: #242424;
-    padding: 10px;
 }
 
 .team-section {
