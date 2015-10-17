@@ -10,6 +10,7 @@ body {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
     background-color: #000;
+    overflow-x: hidden;
 }
 
 html {
@@ -93,9 +94,9 @@ a:focus {
 }
 
 .navbar-custom .nav li a {
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .navbar-custom .nav li a:hover {
@@ -143,16 +144,36 @@ a:focus {
 .intro {
     display: table;
     width: 100%;
-    height: auto;
+    height: 100%;
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/2015_robot_edit.jpg) no-repeat bottom center scroll;
+    background-image: url('../img/2015_robot_edit.jpg');
+    background-position: 50% 0px;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    transition: background-image 1s, background-size 0s;
+    -webkit-transition: background-image 1s, background-size 0s;
+    transition-delay: 1s;
+    -webkit-transition-delay: 1s; /*to let the images preload*/
+}
+
+.intro > * {
+    color: black !important;
+    text-shadow: 0 0 3px solid #fff;
+}
+
+.intro-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .intro .intro-body {
@@ -164,10 +185,34 @@ a:focus {
     font-size: 40px;
 }
 
+.brand-heading-outer {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  left: 0;
+  top: 0;
+  padding: 0;
+}
+
+.brand-heading-content {
+  width: 90vw;
+  height: 50vh;
+  top: 25vh;
+  vertical-align: middle;
+  left: 5vw;
+  position: absolute;
+}
+
+.brand-heading {
+  height: 30%;
+  width: auto;
+}
+
 .intro .intro-body .intro-text {
     font-size: 24px;
     font-weight: bold;
-    color: #fff;
+    color: #000;
 }
 
 .outline-text {
@@ -175,10 +220,10 @@ a:focus {
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
-    1px 1px 0 #000; 
+    1px 1px 0 #000;
 }
 
-@media(min-width:768px) {
+@media all and max-width:768px {
     .intro {
         height: 100%;
         padding: 0;
@@ -191,6 +236,10 @@ a:focus {
     .intro .intro-body .intro-text {
         font-size: 26px;
     }
+
+    .about-section p {
+      font-size: 1.5vh;
+    }
 }
 
 .btn-circle {
@@ -198,21 +247,25 @@ a:focus {
     height: 70px;
     margin-top: 15px;
     padding: 7px 16px;
-    border: 2px solid #fff;
-    border-radius: 100%!important;
+    border: 2px solid #000;
+    border-radius: 100% !important;
     font-size: 40px;
-    color: #fff;
+    color: #000;
     background: 0 0;
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -webkit-transition: background .3s ease-in-out, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    -moz-transition: background .3s ease-in-out, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    transition: background .3s ease-in-out, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .btn-circle:hover,
 .btn-circle:focus {
     outline: 0;
-    color: #fff;
-    background: rgba(255,255,255,.1);
+    color: #000;
+    background: rgba(0,0,0,.1);
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
 }
 
 .btn-circle i.animated {
@@ -229,11 +282,11 @@ a:focus {
     -moz-animation-duration: 1.5s;
     -webkit-animation-iteration-count: infinite;
     -moz-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
+    -webkit-animation-timing-function: ease;
+    -moz-animation-timing-function: ease;
 }
 
-@-webkit-keyframes pulse {    
+@-webkit-keyframes pulse {
     0 {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -250,7 +303,7 @@ a:focus {
     }
 }
 
-@-moz-keyframes pulse {    
+@-moz-keyframes pulse {
     0 {
         -moz-transform: scale(1);
         transform: scale(1);
@@ -267,20 +320,63 @@ a:focus {
     }
 }
 
+.about-image {
+  z-index: -1;
+  height: 100vh;
+  max-height: 700px;
+  width: 100vw;
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0;
+  background-image: url('../img/2014_team_edit.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
 .content-section {
-    padding-top: 100px;
+  padding-top: 25px;
+}
+
+#about {
+  height: 100vh;
+  min-height: 800px;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .about-section {
-    width: 100%;
+    z-index: 1;
+    height: 100vh;
+    min-height: 700px;
+    width: 100vw;
+    overflow: auto;
     padding: 50px 0;
+    padding-right: 20px /*hides scrollbar */
     color: #fff;
     background-color: #000;
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../img/2014_team_edit.jpg) no-repeat center center scroll;
+    background: -moz-linear-gradient(-45deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0.4))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.4) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.4) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.4) 100%); /* IE10+ */
+    background: linear-gradient(135deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.4) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#66000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+.about-section p {
+  font-size: 2vh;
+}
+
+.main-h2 {
+  font-size: 4vh;
+  color: rgba(193, 39, 45, 1);
+  text-shadow: 0 0 5px #000;
 }
 
 .calendar-section {
@@ -293,6 +389,12 @@ a:focus {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+.visible-xs > iframe, .visible-sm > iframe, .visible-md > iframe,
+.visible-lg > iframe {
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 1) !important;
+  background-color: rgba(0, 0, 0, 1) !important;
 }
 
 .team-section {
@@ -326,10 +428,6 @@ a:focus {
 }
 
 @media(min-width:767px) {
-    .content-section {
-        padding-top: 250px;
-    }
-
     .download-section {
         padding: 100px 0;
     }
