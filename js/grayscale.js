@@ -37,6 +37,12 @@ $(function() {
                       + (images[Math.floor(Math.random()*images.length)])
                       + "')");
     }, 5000);
+
+    //Change the about image to a random x-coordinate
+    //Therefore users can see everyone!
+    $(".about-section").css("background-position",
+                            (Math.random()*window.innerHeight*1.25 - window.innerHeight*0.25)
+                            + "px 50%");
 });
 
 // Closes the Responsive Menu on Menu Item Click

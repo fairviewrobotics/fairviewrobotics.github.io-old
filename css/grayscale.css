@@ -75,7 +75,7 @@ a:focus {
     height: auto;
     position: absolute;
     left: 20px;
-    top: 25px;
+    top: 12.5px;
     opacity: 1;
 }
 
@@ -385,63 +385,69 @@ a:focus {
     }
 }
 
-.about-image {
-  z-index: -1;
-  height: 100vh;
-  max-height: 700px;
-  width: 100vw;
-  position: absolute;
-  display: block;
-  left: 0;
-  right: 0;
-  margin: 0;
-  background-image: url('../img/2014_team_edit.jpg');
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
 .content-section {
   padding-top: 25px;
 }
 
 #about {
-  height: 100vh;
-  min-height: 800px;
+  height: auto;
   width: 100vw;
   overflow: hidden;
 }
 
 .about-section {
     z-index: 1;
-    height: 100vh;
-    min-height: 700px;
+    height: auto;
     width: 100vw;
     overflow: auto;
-    padding: 50px 0;
-    padding-right: 20px /*hides scrollbar */
     color: #fff;
+    background-image: url('../img/2014_team_edit.jpg');
+    background-size: cover;
+    background-position: 0px 50%;
     background-color: #000;
-    background: -moz-linear-gradient(-45deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0.4))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(-45deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.4) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(-45deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.4) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(-45deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.4) 100%); /* IE10+ */
-    background: linear-gradient(135deg,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.4) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#66000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
+.about-section > .container {
+  height: auto;
+  width: 100vw !important;
+  background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0.4) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,1)), color-stop(40%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0.4))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,0.4) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,0.4) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,0.4) 100%); /* IE10+ */
+  background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,0.4) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#66000000',GradientType=1 ); /* IE6-9 */
+
+}
+
 .about-section p {
   font-size: 2vh;
+}
+
+.text-container {
+  height: auto;
+  width: 50vw;
+  padding-left: 50px;
 }
 
 .main-h2 {
   font-size: 4vh;
   color: rgba(193, 39, 45, 1);
   text-shadow: 0 0 5px #000;
+}
+
+@media(max-width:768px) {
+  .text-container {
+    width: 90vw;
+    padding-left: 5vw;
+  }
+  .text-container > p {
+    font-size: 3vw;
+  }
 }
 
 .calendar-section {
