@@ -70,6 +70,25 @@ a:focus {
     background-color: #000;
 }
 
+#header-logo, #header-logo-white {
+    width: 20%;
+    height: auto;
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    opacity: 1;
+}
+
+#header-logo {
+    z-index: 1;
+    opacity: 0;
+}
+
+#header-logo-white {
+    z-index: -1;
+    opacity: 1;
+}
+
 .navbar-custom .navbar-brand {
     font-weight: 700;
 }
@@ -123,7 +142,46 @@ a:focus {
     color: #fff;
 }
 
+.rand-quote {
+    text-shadow: 0 0 4px #FFF;
+    font-size: 6vw !important;
+}
+
+.quote-author {
+    text-shadow: 0 0 4px #FFF;
+    font-size: 4vw;
+    margin-left: 40vw;
+    margin-top: -4vh;
+}
+
 @media(min-width:768px) {
+    .rand-quote {
+        font-size: 3vw !important;
+    }
+
+    .quote-author {
+        font-size: 1vw !important;
+    }
+
+    #header-logo, #header-logo-white {
+        height: 90%;
+        width: auto;
+        position: absolute;
+        left: 20px;
+        top: 5%;
+        opacity: 1;
+        transition: opacity 0.5s;
+        -webkit-transition: opacity 0.5s;
+    }
+
+    #header-logo {
+        z-index: 1;
+    }
+
+    #header-logo-white {
+        z-index: -1;
+        opacity: 0;
+    }
     .navbar-custom {
         padding: 20px 0;
         border-bottom: 0;
@@ -138,6 +196,12 @@ a:focus {
         padding: 0;
         border-bottom: 1px solid rgba(255,255,255,.3);
         background: #000;
+    }
+    .navbar-custom.top-nav-collapse #header-logo {
+        opacity: 0;
+    }
+    .navbar-custom.top-nav-collapse #header-logo-white {
+        opacity: 1;
     }
 }
 
@@ -268,11 +332,12 @@ a:focus {
     -webkit-transform: scale(1.2);
 }
 
+.btn-circle i {
+}
+
 .btn-circle i.animated {
-    -webkit-transition-property: -webkit-transform;
-    -webkit-transition-duration: 1s;
-    -moz-transition-property: -moz-transform;
-    -moz-transition-duration: 1s;
+    transition: transform 1s;
+    -webkit-transition: -webkit-transform 1s;
 }
 
 .btn-circle:hover i.animated {
