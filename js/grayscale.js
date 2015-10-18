@@ -5,15 +5,19 @@
  */
 
 // jQuery to collapse the navbar on scroll and for parallax
+var scrollAdjustments = function() {
+  var scroll = $(window).scrollTop()
+  if ($(".navbar").offset().top > 50) {
+      $(".navbar-fixed-top").addClass("top-nav-collapse");
+  } else {
+      $(".navbar-fixed-top").removeClass("top-nav-collapse");
+  }
+  // Parallax for the intro image.
+  $(".intro").css("background-position", "50% " + (0.5*scroll) + "px");
+}
+
 $(window).scroll(function() {
-    var scroll = $(window).scrollTop()
-    if ($(".navbar").offset().top > 50) {
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
-    } else {
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
-    }
-    // Parallax for the intro image.
-    $(".intro").css("background-position", "50% " + (0.5*scroll) + "px");
+  scrollAdjustments();
 });
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
@@ -25,6 +29,9 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
+
+    //Immediately check the window's scroll
+    scrollAdjustments();
 
     // Intro image shifting
     var images = ["2015_robot_edit.jpg"];
