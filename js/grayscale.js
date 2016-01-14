@@ -4,6 +4,12 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+//set a quote to the homepage. can be randomized i guess
+var setQuote = function(quote, author) {
+  $(".rand-quote").html("<i>\"" + quote + "\"</i>");
+  $(".quote-author").html("<i>- " + author.toUpperCase() + "</i>");
+};
+
 // jQuery to collapse the navbar on scroll and for parallax
 var scrollAdjustments = function() {
   var scroll = $(window).scrollTop();
