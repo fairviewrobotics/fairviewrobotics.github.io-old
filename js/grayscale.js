@@ -6,7 +6,7 @@
 
 // jQuery to collapse the navbar on scroll and for parallax
 var scrollAdjustments = function() {
-  var scroll = $(window).scrollTop()
+  var scroll = $(window).scrollTop();
   if ($(".navbar").offset().top > 50) {
       $(".navbar-fixed-top").addClass("top-nav-collapse");
   } else {
@@ -14,7 +14,7 @@ var scrollAdjustments = function() {
   }
   // Parallax for the intro image.
   $(".intro").css("background-position", "50% " + (0.5*scroll) + "px");
-}
+};
 
 $(window).scroll(function() {
   scrollAdjustments();
