@@ -10,6 +10,27 @@ var setQuote = function(quote, author) {
   $(".quote-author").html("<i>- " + author.toUpperCase() + "</i>");
 };
 
+//Returns a shuffled array. Used for carousel randomization.
+function shuffle(array) {
+    var counter = array.length, temp, index;
+
+    // While there are elements in the array
+    while (counter > 0) {
+        // Pick a random index
+        index = Math.floor(Math.random() * counter);
+
+        // Decrease counter by 1
+        counter--;
+
+        // And swap the last element with it
+        temp = array[counter];
+        array[counter] = array[index];
+        array[index] = temp;
+    }
+
+    return array;
+}
+
 // jQuery to collapse the navbar on scroll and for parallax
 var scrollAdjustments = function() {
   var scroll = $(window).scrollTop();
@@ -41,17 +62,23 @@ $(function() {
 
     // Intro image shifting
     var imagesArr = [];
+    currImage = 0;
     // Add intro-1.jpg to intro-15.jpg
-    for(var i = 1; i <= 15; i++) {
+    for(var i = 1; i <= 20; i++) {
       imagesArr.push("intro-" + i + ".jpg");
     }
-    $(".intro").css("background-image", "url('img/"
-                    + (imagesArr[Math.floor(Math.random()*imagesArr.length)])
-                    + "')");
+
+    //shuffle imagesArr
+    imagesArr = shuffle(imagesArr);
+
+    $(".intro").css("background-image", "url('img/" + (imagesArr[0]) +"')");
+    //go through each image
     setInterval(function() {
-      $(".intro").css("background-image", "url('img/"
-                      + (imagesArr[Math.floor(Math.random()*imagesArr.length)])
-                      + "')");
+      currImage++;
+      if(currImage >= imagesArr.length) {
+        currImage = 0;
+      }
+      $(".intro").css("background-image", "url('img/" + (imagesArr[currImage]) +"')");
     }, 5000);
 
     //Change the about image to a random x-coordinate
