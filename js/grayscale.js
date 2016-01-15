@@ -52,7 +52,7 @@ $(function() {
       $(".intro").css("background-image", "url('img/"
                       + (imagesArr[Math.floor(Math.random()*imagesArr.length)])
                       + "')");
-    }, 2500);
+    }, 5000);
 
     //Change the about image to a random x-coordinate
     //Therefore users can see everyone!
