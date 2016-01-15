@@ -40,16 +40,19 @@ $(function() {
     scrollAdjustments();
 
     // Intro image shifting
-    var images = ["2015_robot_edit.jpg"];
-    // Add intro-1.jpg to intro-7.jpg
-    for(var i = 1; i <= 7; i++) {
-      images.push("intro-" + i + ".jpg");
+    var imagesArr = [];
+    // Add intro-1.jpg to intro-15.jpg
+    for(var i = 1; i <= 15; i++) {
+      imagesArr.push("intro-" + i + ".jpg");
     }
+    $(".intro").css("background-image", "url('img/"
+                    + (imagesArr[Math.floor(Math.random()*imagesArr.length)])
+                    + "')");
     setInterval(function() {
       $(".intro").css("background-image", "url('img/"
-                      + (images[Math.floor(Math.random()*images.length)])
+                      + (imagesArr[Math.floor(Math.random()*imagesArr.length)])
                       + "')");
-    }, 5000);
+    }, 2500);
 
     //Change the about image to a random x-coordinate
     //Therefore users can see everyone!
