@@ -10,6 +10,9 @@ var setQuote = function(quote, author) {
   $(".quote-author").html("<i>- " + author.toUpperCase() + "</i>");
 };
 
+var quotes = [["If we win how big will our dinner be", "Jackson Chen"],
+          ["We should also have interpretive dance.", "Adam Chehadi"]];
+
 //Returns a shuffled array. Used for carousel randomization.
 function shuffle(array) {
     var counter = array.length, temp, index;
@@ -39,8 +42,13 @@ var scrollAdjustments = function() {
   } else {
       $(".navbar-fixed-top").removeClass("top-nav-collapse");
   }
+  if (scroll >= 1000) {
+    $("#image-parallax").css("position", "absolute");
+  } else {
+    $("#image-parallax").css("position", "fixed");
+  }
   // Parallax for the intro image.
-  $(".intro").css("background-position", "50% " + (0.5*scroll) + "px");
+  // $(".intro").css("background-position", "50% " + (0.5*scroll) + "px");
 };
 
 $(window).scroll(function() {
@@ -71,14 +79,14 @@ $(function() {
     //shuffle imagesArr
     imagesArr = shuffle(imagesArr);
 
-    $(".intro").css("background-image", "url('img/" + (imagesArr[0]) +"')");
+    $("#image-parallax").css("background-image", "url('img/" + (imagesArr[0]) +"')");
     //go through each image
     setInterval(function() {
       currImage++;
       if(currImage >= imagesArr.length) {
         currImage = 0;
       }
-      $(".intro").css("background-image", "url('img/" + (imagesArr[currImage]) +"')");
+      $("#image-parallax").css("background-image", "url('img/" + (imagesArr[currImage]) +"')");
     }, 5000);
 
     //Change the about image to a random x-coordinate
@@ -86,6 +94,10 @@ $(function() {
     $(".about-section").css("background-position",
                             (Math.random()*window.innerHeight*1.25 - window.innerHeight*0.25)
                             + "px 50%");
+
+    //Sets a random quote upon the page loading
+    randQuoteArr = quotes[Math.floor(Math.random()*quotes.length)]
+    setQuote(randQuoteArr[0], randQuoteArr[1]);
 });
 
 // Closes the Responsive Menu on Menu Item Click
