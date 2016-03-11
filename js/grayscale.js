@@ -10,18 +10,12 @@ var setQuote = function(quote, author) {
   $(".quote-author").html("<i>- " + author.toUpperCase() + "</i>");
 };
 
-var quotes = [["If we win how big will our dinner be", "Jackson Chen"],
-              ["We should also have interpretive dance.", "Adam Chehadi"],
-              ["For the competition, can we get the people in the spirit pit thing some vuvuzelas?", "Sky Johnson"],
-              ["So in transit, upon dropping off the robot, the electrical box fell, and all the crimps fell out into the box so.....", "Rathan Kumar"],
-              ["Did you know that you can buy 2 gallons of 8 molar HCl at homedepot at 8:50 on a Tuesday night?", "Wyatt Peck"],
-              ["But how can we test maturity? Tell them poop jokes and see if they laugh? I'd fail that.", "Noah Finer"],
-              ["111% serious", "Brendan Haines"],
-              ["Give the team a year we're good. Give the team 2 years we'll win a regional. Give the team 7 years and we're unbeatable.", "Wyatt Peck"],
-              ["LET'S MAKE FAIRVIEW ROBOTICS GREAT AGAIN!!!!!", "Brendan Haines"],
-              ["WE NEED TO BUILD A WALL", "TrumpBot"],
-              ["The location of this meeting and the location of my body will not be identical at any point during the time this meeting is occuring", "Jordan Bucuhman"],
-              ["I must also say art thou a dissembling flap-mouthed clack-dish.", "Parker Grosjean"]];
+var quotes = [["Oh my god that was terrifying. Do it again.", "David Down"],
+              ["Did you know that you can buy 2 gallons of 8 molar HCl at Home Depot at 8:50 on a Tuesday night?", "Wyatt Peck"],
+              ["The location of this meeting and the location of my body will not be identical at any point during the time this meeting is occuring.", "Jordan Buchman"],
+              ["If \"plan A\" didn't work the alphabet has 25 more letters.", "Unknown"],
+              ["Failure is the opportunity to begin again more intelligently.", "Henry Ford"],
+              ["A good idea is worthless without impeccable execution and a commitment to iterate.", "Zach Klein"]];
 
 //Returns a shuffled array. Used for carousel randomization.
 function shuffle(array) {
