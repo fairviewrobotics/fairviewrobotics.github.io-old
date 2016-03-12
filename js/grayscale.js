@@ -13,7 +13,7 @@ var setQuote = function(quote, author) {
 var quotes = [["Oh my god that was terrifying. Do it again.", "David Down"],
               ["Did you know that you can buy 2 gallons of 8 molar HCl at Home Depot at 8:50 on a Tuesday night?", "Wyatt Peck"],
               ["The location of this meeting and the location of my body will not be identical at any point during the time this meeting is occuring.", "Jordan Buchman"],
-              ["If \"plan A\" didn't work the alphabet has 25 more letters.", "Unknown"],
+              ["If 'plan A' didn't work the alphabet has 25 more letters.", "Unknown"],
               ["Failure is the opportunity to begin again more intelligently.", "Henry Ford"],
               ["A good idea is worthless without impeccable execution and a commitment to iterate.", "Zach Klein"]];
 
