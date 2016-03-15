@@ -10,6 +10,7 @@ body {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
     background-color: #000;
+    overflow-x: hidden;
 }
 
 html {
@@ -69,6 +70,25 @@ a:focus {
     background-color: #000;
 }
 
+#header-logo, #header-logo-white {
+    width: 20%;
+    height: auto;
+    position: absolute;
+    left: 20px;
+    top: 12.5px;
+    opacity: 1;
+}
+
+#header-logo {
+    z-index: 1;
+    opacity: 0;
+}
+
+#header-logo-white {
+    z-index: -1;
+    opacity: 1;
+}
+
 .navbar-custom .navbar-brand {
     font-weight: 700;
 }
@@ -93,9 +113,9 @@ a:focus {
 }
 
 .navbar-custom .nav li a {
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .navbar-custom .nav li a:hover {
@@ -122,7 +142,46 @@ a:focus {
     color: #fff;
 }
 
+.rand-quote {
+    text-shadow: 0 0 4px #FFF;
+    font-size: 6vw !important;
+}
+
+.quote-author {
+    text-shadow: 0 0 4px #FFF;
+    font-size: 4vw;
+    margin-left: 40vw;
+    margin-top: -4vh;
+}
+
 @media(min-width:768px) {
+    .rand-quote {
+        font-size: 3vw !important;
+    }
+
+    .quote-author {
+        font-size: 1vw !important;
+    }
+
+    #header-logo, #header-logo-white {
+        height: 90%;
+        width: auto;
+        position: absolute;
+        left: 20px;
+        top: 5%;
+        opacity: 1;
+        transition: opacity 0.5s;
+        -webkit-transition: opacity 0.5s;
+    }
+
+    #header-logo {
+        z-index: 1;
+    }
+
+    #header-logo-white {
+        z-index: -1;
+        opacity: 0;
+    }
     .navbar-custom {
         padding: 20px 0;
         border-bottom: 0;
@@ -138,21 +197,56 @@ a:focus {
         border-bottom: 1px solid rgba(255,255,255,.3);
         background: #000;
     }
+    .navbar-custom.top-nav-collapse #header-logo {
+        opacity: 0;
+    }
+    .navbar-custom.top-nav-collapse #header-logo-white {
+        opacity: 1;
+    }
+}
+
+#image-parallax {
+  height: calc(100% + 100px);
+  width: 100%;
+  top: -100px;
+  position: fixed;
+  z-index: -1;
+  background-image: url('../img/intro-1.jpg');
+  background-position: 50% 0px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  transition: background-image 1s, background-size 0s;
+  -webkit-transition: background-image 1s, background-size 0s;
+  filter: grayscale();
+  -webkit-filter: grayscale();
+  transition-delay: 2s;
+  -webkit-transition-delay: 2s; /*to let the images preload*/
 }
 
 .intro {
     display: table;
     width: 100%;
-    height: auto;
+    height: 100%;
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/2015_robot_edit.jpg) no-repeat bottom center scroll;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+}
+
+.intro > * {
+    color: black !important;
+    text-shadow: 0 0 3px solid #fff;
+}
+
+.intro-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .intro .intro-body {
@@ -164,10 +258,34 @@ a:focus {
     font-size: 40px;
 }
 
+.brand-heading-outer {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  left: 0;
+  top: 0;
+  padding: 0;
+}
+
+.brand-heading-content {
+  width: 90vw;
+  height: 50vh;
+  top: 25vh;
+  vertical-align: middle;
+  left: 5vw;
+  position: absolute;
+}
+
+.brand-heading {
+  height: 30%;
+  width: auto;
+}
+
 .intro .intro-body .intro-text {
     font-size: 24px;
     font-weight: bold;
-    color: #fff;
+    color: #000;
 }
 
 .outline-text {
@@ -175,10 +293,10 @@ a:focus {
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
-    1px 1px 0 #000; 
+    1px 1px 0 #000;
 }
 
-@media(min-width:768px) {
+@media all and max-width:768px {
     .intro {
         height: 100%;
         padding: 0;
@@ -191,6 +309,10 @@ a:focus {
     .intro .intro-body .intro-text {
         font-size: 26px;
     }
+
+    .about-section p {
+      font-size: 1.5vh;
+    }
 }
 
 .btn-circle {
@@ -198,28 +320,33 @@ a:focus {
     height: 70px;
     margin-top: 15px;
     padding: 7px 16px;
-    border: 2px solid #fff;
-    border-radius: 100%!important;
+    border: 2px solid #000;
+    border-radius: 100% !important;
     font-size: 40px;
-    color: #fff;
+    color: #000;
     background: 0 0;
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -webkit-transition: background .3s ease-in-out, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    -moz-transition: background .3s ease-in-out, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    transition: background .3s ease-in-out, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .btn-circle:hover,
 .btn-circle:focus {
     outline: 0;
-    color: #fff;
-    background: rgba(255,255,255,.1);
+    color: #000;
+    background: rgba(0,0,0,.1);
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+}
+
+.btn-circle i {
 }
 
 .btn-circle i.animated {
-    -webkit-transition-property: -webkit-transform;
-    -webkit-transition-duration: 1s;
-    -moz-transition-property: -moz-transform;
-    -moz-transition-duration: 1s;
+    transition: transform 1s;
+    -webkit-transition: -webkit-transform 1s;
 }
 
 .btn-circle:hover i.animated {
@@ -229,11 +356,11 @@ a:focus {
     -moz-animation-duration: 1.5s;
     -webkit-animation-iteration-count: infinite;
     -moz-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
+    -webkit-animation-timing-function: ease;
+    -moz-animation-timing-function: ease;
 }
 
-@-webkit-keyframes pulse {    
+@-webkit-keyframes pulse {
     0 {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -250,7 +377,7 @@ a:focus {
     }
 }
 
-@-moz-keyframes pulse {    
+@-moz-keyframes pulse {
     0 {
         -moz-transform: scale(1);
         transform: scale(1);
@@ -268,19 +395,68 @@ a:focus {
 }
 
 .content-section {
-    padding-top: 100px;
+  border-top: 25px solid black;
+}
+
+#about {
+  height: auto;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .about-section {
-    width: 100%;
-    padding: 50px 0;
+    z-index: 1;
+    height: auto;
+    width: 100vw;
+    overflow: auto;
     color: #fff;
+    background-image: url('../img/2014_team_edit.jpg');
+    background-size: cover;
+    background-position: 0px 50%;
     background-color: #000;
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../img/2014_team_edit.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+.about-section > .container {
+  height: auto;
+  width: 100vw !important;
+  background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0.4) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,1)), color-stop(40%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0.4))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,0.4) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,0.4) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,0.4) 100%); /* IE10+ */
+  background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,0.4) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#66000000',GradientType=1 ); /* IE6-9 */
+
+}
+
+.about-section p {
+  font-size: 2vh;
+}
+
+.text-container {
+  height: auto;
+  width: 50vw;
+  padding-left: 50px;
+}
+
+.main-h2 {
+  font-size: 4vh;
+  color: rgba(193, 39, 45, 1);
+  text-shadow: 0 0 5px #000;
+}
+
+@media(max-width:768px) {
+  .text-container {
+    width: 90vw;
+    padding-left: 5vw;
+  }
+  .text-container > p {
+    font-size: 3vw;
+  }
 }
 
 .calendar-section {
@@ -293,6 +469,12 @@ a:focus {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+.visible-xs > iframe, .visible-sm > iframe, .visible-md > iframe,
+.visible-lg > iframe {
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 1) !important;
+  background-color: rgba(0, 0, 0, 1) !important;
 }
 
 .team-section {
@@ -326,10 +508,6 @@ a:focus {
 }
 
 @media(min-width:767px) {
-    .content-section {
-        padding-top: 250px;
-    }
-
     .download-section {
         padding: 100px 0;
     }

@@ -16,8 +16,8 @@
 
     <!-- Custom CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
-    
-    
+
+
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -30,7 +30,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
 
 </head>
@@ -47,6 +47,11 @@
                 <a class="navbar-brand page-scroll" href="#page-top">
                 </a>
             </div>
+
+            <a class="page-scroll" href="#page-top">
+              <img src="img/logo.svg" id="header-logo"/>
+              <img src="img/logo-white.svg" id="header-logo-white"/>
+            </a>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
@@ -73,30 +78,40 @@
 
     <!-- Intro Header -->
     <header class="intro">
+        <div class="intro-mask">
+        </div>
+        <div id="image-parallax">
+        </div>
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-						<img class="brand-heading" src="img/logo.svg">
-                        <p>Site Under Construction</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                    </div>
-                </div>
+                    <div class="heading-outer">
+                      <div class="brand-heading-outer">
+                        <div class="brand-heading-content">
+                          <h1 class="rand-quote"><i></i></h1>
+                          <h1 class="quote-author"><i></i></h1>
+                          <!-- <img class="brand-heading" src="img/logo.svg"> -->
+                          <p>Site Under Construction</p>
+                          <a href="#about" class="btn btn-circle page-scroll">
+                              <i class="fa fa-angle-double-down animated"></i>
+                          </a>
+                      </div>
+                 </div>
             </div>
         </div>
     </header>
 
     <!-- Overview Section -->
-    <section id="about" class="content-section text-center">
+    <section id="about" class="content-section">
         <div class="about-section">
             <div class="container">
-                <h2>About Fairview Robotics</h2>
-                <p>We are Fairview High School's FIRST Robotics Team, the Black Knights! We began in 2007, and we have competed in the <a href="http://www.usfirst.org/roboticsprograms/frc">FIRST Robotics Competition (FRC)</a> at the Denver regional every year since. In 2010, our team won the regional and attended the World Championship in Atlanta!</p>
-                <p>What do we actually do? We design, create and test a robot to compete in the FIRST Robotics Competition. Our past robots have been able to shoot frisbees, climb pyramids, toss basketballs, and balance on bridges!</p>
-                <p>All of this takes a lot of work: our team members focus on aspects of electric engineering, programming, mechanical testing, fundraising and web design. It is not necessary to have previous technical knowledge. We guarantee you'll learn something and contribute to the team!</p>
-                <p>At the beginning of the school year, we meet once a week. However, during the six-week build season beginning in January, we meet up to six times a week to work on our robot. We compete at regional scrimmages like the Denver regional, and are hoping to get to the World Championship in the 2016 season!</p>
+                <div class="text-container">
+                    <h2 class="main-h2">About Fairview Robotics</h2>
+                    <p>We are Fairview High School's FIRST Robotics Team, the Black Knights! We began in 2007, and we have competed in the <a href="http://www.usfirst.org/roboticsprograms/frc">FIRST Robotics Competition (FRC)</a> at the Denver regional every year since. In 2010, our team won the regional and attended the World Championship in Atlanta!</p>
+                    <p>What do we actually do? We design, create and test a robot to compete in the FIRST Robotics Competition. Our past robots have been able to shoot frisbees, climb pyramids, toss basketballs, and balance on bridges!</p>
+                    <p>All of this takes a lot of work: our team members focus on aspects of electric engineering, programming, mechanical testing, fundraising and web design. It is not necessary to have previous technical knowledge. We guarantee you'll learn something and contribute to the team!</p>
+                    <p>At the beginning of the school year, we meet once a week. However, during the six-week build season beginning in January, we meet up to six times a week at Boulder High School to work on our robot. We compete at regional scrimmages like the Denver regional, and are hoping to get to the World Championship in the 2015 season!</p>
+                </div>
             </div>
         </div>
     </section>
@@ -104,7 +119,7 @@
     <section id="calendar" class="content-section text-center">
         <div class="calendar-section">
             <div class="container">
-                <h2>Upcoming Events</h2>
+                <h2 class="main-h2">Upcoming Events</h2>
                 <div class="visible-xs">
                     <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=fairviewrobotics%40gmail.com&amp;color=%23060D5E&amp;ctz=America%2FDenver" style=" border-width:0 " width="100%" height="300" frameborder="0" scrolling="no"></iframe>
                 </div>
