@@ -44,11 +44,11 @@
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                   <i class="fa fa-bars"></i>
               </button>
-              <a class="navbar-brand page-scroll" href="#page-top">
+              <a class="navbar-brand page-scroll" href="../index.html">
               </a>
           </div>
 
-          <a class="page-scroll" href="#page-top">
+          <a class="page-scroll" href="../index.html">
             <img src="../img/logo.svg" id="header-logo"/>
             <img src="../img/logo-white.svg" id="header-logo-white"/>
           </a>
@@ -79,6 +79,13 @@
   </div>
   <h1 class="page-title">Gallery</h1>
   <div class="content-section" id="gallery-outer">
+    <div id="gallery-header">
+      <a class="btn btn-default btn-lg">2015 Building</a>
+      <a class="btn btn-default btn-lg">2015 Competition</a>
+      <a onclick="selectedGal = galleries.build2016" class="btn btn-default btn-lg btn-gallery" id="2016-build">2016 Building</a>
+      <a onclick="selectedGal = galleries.bag2016" class="btn btn-default btn-lg btn-gallery" id="2016-bag">2016 Bag Day</a>
+      <a onclick="selectedGal = galleries.comp2016" class="btn btn-default btn-lg btn-gallery" id="2016-comp">2016 Competition</a>
+    </div>
     <div id="gallery-content">
     </div>
     <footer>

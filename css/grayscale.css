@@ -535,7 +535,8 @@ a:focus {
 }
 
 .btn-default:hover,
-.btn-default:focus {
+.btn-default:focus,
+.btn-default.selected {
     border: 1px solid #c1272d;
     outline: 0;
     color: #000;
@@ -613,12 +614,12 @@ body {
 /* gallery */
 .page-title {
   position: absolute;
-  font-size: 125px;
+  font-size: 10vw;
   text-align: center;
   display: block;
   left: 0;
   right: 0;
-  top: 100px;
+  top: 10vw;
 }
 
 #image-full-outer {
@@ -672,7 +673,7 @@ body {
 #gallery-outer {
   width: 100vw;
   background-color: black;
-  top: 300px;
+  top: 25vw;
   position: relative;
   padding: 5px;
 }
@@ -730,4 +731,21 @@ body {
 .full-arrow:hover {
   opacity: 1;
   color: white;
+}
+
+#gallery-header {
+  height: auto;
+  padding: 10px;
+  width: 100vw;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#gallery-header > a {
+  height: auto;
+  padding: 10px;
+  margin: 10px 0;
 }

@@ -1,10 +1,14 @@
+var galleryResetTimeout;
+
 var Gallery = function(location, amount) {
   this.location = location;
   this.amount = amount;
 };
 
 var galleries = {
-  comp2016: new Gallery("2016-comp", 22)
+  comp2016: new Gallery("2016-comp", 22),
+  build2016: new Gallery("2016-build", 28),
+  bag2016: new Gallery("2016-bag", 30)
 };
 
 var selectedGal = galleries.comp2016;
@@ -75,17 +79,21 @@ var decrementImage = function() {
 };
 
 var resetGallery = function() {
-  $(".image-thumb-outer").remove();
-  for(i = 0; i <= selectedGal.amount; i++) {
-    $("#gallery-content").append(
-      '<div class="image-thumb-outer">'
-      + '<img class="image-thumb" height="87.5px" width="auto" src="'+selectedGal.location+'/'+i+'.jpg"/>'
-    + '</div>');
-  }
-
-  $(".image-thumb-outer").on("click", function() {
-    showImage($(this).children().attr("src"), true);
+  $(".image-thumb-outer").animate({opacity: 0}, 250, function() {
+    $(this).remove();
   });
+  clearTimeout(galleryResetTimeout);
+  galleryResetTimeout = setTimeout(function() {
+    for(i = 0; i <= selectedGal.amount; i++) {
+      $("#gallery-content").append(
+          '<div class="image-thumb-outer">'
+          + '<img class="image-thumb" height="87.5px" width="auto" src="'+selectedGal.location+'/'+i+'.jpg"/>'
+        + '</div>');
+    }
+    $(".image-thumb-outer").on("click", function() {
+      showImage($(this).children().attr("src"), true);
+    });
+  }, 200);
 };
 
 $(document).ready(function() {
@@ -97,5 +105,26 @@ $(document).ready(function() {
 
   $("#image-full-outer > img, #image-full-left, #image-full-right").click(function(event) {
     event.stopPropagation();
+  });
+
+  $(".btn-gallery").click(function() {
+    $(".btn-gallery").removeClass("selected");
+    $(this).addClass("selected");
+    resetGallery();
+  });
+
+  $(document).keydown(function(e) {
+    if(!($("#image-full-outer").hasClass("non-bootstrap-hidden"))) {
+      switch(e.which) {
+          case 37: // left
+          decrementImage();
+          break;
+
+          case 39: // right
+          incrementImage();
+          break;
+      }
+      e.preventDefault();
+    }
   });
 });
