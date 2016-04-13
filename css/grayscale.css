@@ -634,14 +634,18 @@ body {
   align-items: center;
   opacity: 1;
   pointer-events: auto;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
+  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
 }
 
 #image-full-outer > img {
   width: auto;
   height: 90%;
   pointer-events: auto;
+}
+
+#image-full-outer.non-bootstrap-hidden > img {
+  pointer-events: none !important;
 }
 
 #image-full-close {
@@ -660,11 +664,9 @@ body {
   text-decoration: underline;
 }
 
-#image-full-outer.hidden {
+#image-full-outer.non-bootstrap-hidden {
   opacity: 0;
   pointer-events: none;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
 }
 
 #gallery-outer {
@@ -705,9 +707,11 @@ body {
 }
 
 .full-arrow {
-  font-size: 100px;
+  font-size: 150px;
   position: absolute;
-  bottom: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
   color: white;
   opacity: 0.8;
   cursor: pointer;

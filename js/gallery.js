@@ -11,11 +11,11 @@ var selectedGal = galleries.comp2016;
 
 var showImage = function(image, state) {
   if(state) {
-    $("#image-full-outer").removeClass("hidden");
+    $("#image-full-outer").removeClass("non-bootstrap-hidden");
     $(".image-full").attr("src", image);
   }
   else {
-    $("#image-full-outer").addClass("hidden");
+    $("#image-full-outer").addClass("non-bootstrap-hidden");
   }
 };
 
