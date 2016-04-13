@@ -565,11 +565,13 @@ ul.banner-social-buttons {
 }
 
 footer {
-    padding: 50px 0;
+  width: 100vw;
+  padding: 50px 0;
 }
 
 footer p {
     margin: 0;
+    text-align: center;
 }
 
 ::-moz-selection {
@@ -605,4 +607,123 @@ body {
     background-color: #242424;
     margin: 10px;
     padding: 10px;
+}
+
+
+/* gallery */
+.page-title {
+  position: absolute;
+  font-size: 125px;
+  text-align: center;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 100px;
+}
+
+#image-full-outer {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 0;
+  padding: 0;
+  z-index: 1000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+#image-full-outer > img {
+  width: auto;
+  height: 90%;
+  pointer-events: auto;
+}
+
+#image-full-close {
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0.8;
+  cursor: pointer;
+  color: white;
+  transition: none;
+}
+
+#image-full-close:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+#image-full-outer.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+#gallery-outer {
+  width: 100vw;
+  background-color: black;
+  top: 300px;
+  position: relative;
+  padding: 5px;
+}
+
+#gallery-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.image-thumb-outer {
+  border: 2px solid #666;
+  height: 100px;
+  background-color: black;
+  width: auto;
+  padding: 5px;
+  margin: 25px;
+  cursor: pointer;
+  display: inline-block;
+  transition: border 0.25s;
+  -webkit-transition: border 0.25s;
+}
+
+.image-thumb-outer:hover {
+  border: 2px solid #b20202;
+}
+
+.image-thumb {
+  pointer-events: none;
+}
+
+.full-arrow {
+  font-size: 100px;
+  position: absolute;
+  bottom: 100px;
+  color: white;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: none;
+  -webkit-transition: none;
+}
+
+#image-full-left {
+  left: 10px;
+}
+
+#image-full-right {
+  right: 10px;
+}
+
+.full-arrow:hover {
+  opacity: 1;
+  color: white;
 }
