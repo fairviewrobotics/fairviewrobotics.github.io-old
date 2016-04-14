@@ -15,10 +15,13 @@ var selectedGal = galleries.comp2016;
 
 var showImage = function(image, state) {
   if(state) {
+    $("body").addClass("noscroll");
     $("#image-full-outer").removeClass("non-bootstrap-hidden");
     $(".image-full").attr("src", image);
+    checkWidth();
   }
   else {
+    $("body").removeClass("noscroll");
     $("#image-full-outer").addClass("non-bootstrap-hidden");
   }
 };
@@ -45,6 +48,7 @@ var incrementImage = function() {
 
   var result = selectedGal.location + "/" + secondDigit + "" + firstDigit + ".jpg";
   showImage(result, true);
+  checkWidth();
 };
 
 var decrementImage = function() {
@@ -76,6 +80,7 @@ var decrementImage = function() {
 
   var result = selectedGal.location + "/" + secondDigit + "" + firstDigit + ".jpg";
   showImage(result, true);
+  checkWidth();
 };
 
 var resetGallery = function() {
@@ -95,6 +100,23 @@ var resetGallery = function() {
     });
   }, 200);
 };
+
+var checkWidth = function() {
+  var wHeight = window.innerHeight;
+  var wWidth = window.innerWidth;
+  var iHeight = $(".image-full").height();
+  var iWidth = $(".image-full").width();
+  if(iWidth >= wWidth*0.9) {
+    $(".image-full").addClass("width90");
+  }
+  if(iHeight >= wHeight*0.9) {
+    $(".image-full").removeClass("width90");
+  }
+}
+
+$(window).resize(function() {
+  checkWidth();
+});
 
 $(document).ready(function() {
   resetGallery();
