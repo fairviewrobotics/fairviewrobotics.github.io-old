@@ -628,6 +628,8 @@ body {
   left: 0;
   right: 0;
   top: 10vw;
+  color: black;
+  text-shadow: 0 0 4px #fff;
 }
 
 #image-full-outer {
@@ -692,9 +694,10 @@ body {
 }
 
 #gallery-content {
-  width: 100%;
+  width: auto;
   height: auto;
   display: flex;
+  align-content: flex-start;
   flex-wrap: wrap;
   justify-content: space-around;
 }
@@ -708,12 +711,12 @@ body {
   margin: 15px;
   cursor: pointer;
   display: inline-block;
-  transition: border 0.25s;
-  -webkit-transition: border 0.25s;
+  transition: border 0.2s;
+  -webkit-transition: border 0.2s;
 }
 
 .image-thumb-outer:hover {
-  border: 2px solid #b20202;
+  border: 2px solid #822;
 }
 
 .image-thumb {
@@ -761,4 +764,9 @@ body {
   height: auto;
   padding: 10px;
   margin: 10px 0;
+}
+
+.btn-gallery {
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
 }
