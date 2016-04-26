@@ -6,8 +6,8 @@ var Gallery = function(location, amount) {
 };
 
 var galleries = {
-  comp2016: new Gallery("2016-comp", 22),
-  build2016: new Gallery("2016-build", 28),
+  comp2016: new Gallery("2016-comp", 26),
+  build2016: new Gallery("2016-build", 35),
   bag2016: new Gallery("2016-bag", 30)
 };
 
