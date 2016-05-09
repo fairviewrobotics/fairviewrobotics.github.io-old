@@ -92,11 +92,11 @@ var resetGallery = function() {
     for(i = 0; i <= selectedGal.amount; i++) {
       $("#gallery-content").append(
           '<div class="image-thumb-outer">'
-          + '<img class="image-thumb" height="87.5px" width="auto" src="'+selectedGal.location+'/'+i+'.jpg"/>'
+          + '<img class="image-thumb" height="87.5px" width="auto" src="'+selectedGal.location+'/thumbnails/'+i+'.jpg"/>'
         + '</div>');
     }
     $(".image-thumb-outer").on("click", function() {
-      showImage($(this).children().attr("src"), true);
+      showImage($(this).children().attr("src").replace("/thumbnails", ""), true);
     });
   }, 200);
 };
@@ -138,15 +138,20 @@ $(document).ready(function() {
   $(document).keydown(function(e) {
     if(!($("#image-full-outer").hasClass("non-bootstrap-hidden"))) {
       switch(e.which) {
+          case 27: // esc
+            showImage("", false);
+            break;
+
           case 37: // left
           decrementImage();
+          e.preventDefault();
           break;
 
           case 39: // right
           incrementImage();
+          e.preventDefault();
           break;
       }
-      e.preventDefault();
     }
   });
 });
