@@ -26,6 +26,10 @@ html {
     height: 100%;
 }
 
+.page-scroll {
+  z-index: 100;
+}
+
 h1,
 h2,
 h3,
@@ -413,36 +417,69 @@ a:focus {
 }
 
 .about-section {
-    z-index: 1;
-    height: auto;
-    width: 100vw;
-    overflow: auto;
-    color: #fff;
-    background-image: url('../img/2014_team_edit.jpg');
-    background-size: cover;
-    background-position: 0px 50%;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+  padding: 0;
+  z-index: 1;
+  height: auto;
+  width: 100vw;
+  overflow: auto;
+  color: #fff;
+  background-image: url('../img/2016-team.jpg');
+  background-size: cover;
+  background-position: 0px 25%;
+  background-color: #000;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 
-.about-section > .container {
+.whatwedo-section {
+  background-image: url('../img/2016-bot.jpg');
+}
+
+.meetings-section {
+  background-image: url('../img/2016-meeting.jpg');
+  background-position: 0px 50%;
+}
+
+.gradient-1 > .container {
   height: auto;
+  padding: 20px;
   width: 100vw !important;
-  background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0.4) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,1)), color-stop(40%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0.4))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,0.4) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,0.4) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,0.4) 100%); /* IE10+ */
-  background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,0.4) 100%); /* W3C */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&1+0,1+40,0.4+100 */
+  background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0.4) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#66000000',GradientType=1 ); /* IE6-9 */
 
 }
 
+.gradient-2 > .container {
+  height: auto;
+  padding: 20px;
+  width: 100vw !important;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.4+0,1+60,1+100 */
+  background: -moz-linear-gradient(left,  rgba(0,0,0,0.4) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+
+}
+
+.gradient-2 p, .gradient-2 h2 {
+  text-align: right;
+}
+
+.gradient-2 .text-container {
+  float: right;
+}
+
 .about-section p {
-  font-size: 2vh;
+  font-size: 2.5vh;
+}
+
+.about-section h2 {
+  font-size: 5vh;
 }
 
 .text-container {
@@ -558,6 +595,9 @@ ul.banner-social-buttons {
 @media(max-width:1199px) {
     ul.banner-social-buttons {
         margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
@@ -565,6 +605,8 @@ ul.banner-social-buttons {
     ul.banner-social-buttons li {
         display: block;
         margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
         padding: 0;
     }
 
@@ -627,9 +669,16 @@ body {
   display: block;
   left: 0;
   right: 0;
-  top: 10vw;
+  top: calc(5vw + 50px);
   color: black;
   text-shadow: 0 0 4px #fff;
+}
+
+@media(max-width:450px) {
+  .page-title {
+    font-size: 7.5vw;
+    top: calc(4vw + 50px);
+  }
 }
 
 #image-full-outer {
@@ -769,4 +818,20 @@ body {
 .btn-gallery {
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
+}
+
+.text-content {
+  width: 100vw;
+  background-color: black;
+  top: 25vw;
+  position: relative;
+  border: 0;
+  /*padding: 5px;*/
+}
+
+#footer-buttons-outer {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }

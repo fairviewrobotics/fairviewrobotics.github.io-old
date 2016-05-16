@@ -16,7 +16,9 @@ var quotes = [["Oh my god that was terrifying. Do it again.", "David Down"],
               ["If 'plan A' didn't work the alphabet has 25 more letters.", "Unknown"],
               ["I can count to two correctly!", "Adam Chehadi"],
               ["If we win, how big will the team dinner be?", "Jackson Chen"],
-              ["Ultra precise is more than just two words. It's a lifestyle.", "Rahul Krishnan and Adam Chehadi"]];
+              ["Ultra precise is more than just two words. It's a lifestyle.", "Rahul Krishnan and Adam Chehadi"],
+              ["Velocity is in ft/mile.", "Rahul Krishnan"],
+              ["The truth is like poetry, and most people hate poetry.", "Vikram Tholakapalli"]];
 
 //Returns a shuffled array. Used for carousel randomization.
 function shuffle(array) {
@@ -47,7 +49,7 @@ var scrollAdjustments = function() {
   } else {
       $(".navbar-fixed-top").removeClass("top-nav-collapse");
   }
-  if (scroll >= 1000) {
+  if (scroll >= 600) {
     $("#image-parallax").css("position", "absolute");
   } else {
     $("#image-parallax").css("position", "fixed");
