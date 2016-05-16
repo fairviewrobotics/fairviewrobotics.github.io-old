@@ -14,10 +14,10 @@ var quotes = [["Oh my god that was terrifying. Do it again.", "David Down"],
               ["Did you know that you can buy 2 gallons of 8 molar HCl at Home Depot at 8:50 on a Tuesday night?", "Wyatt Peck"],
               ["The location of this meeting and the location of my body will not be identical at any point during the time this meeting is occuring.", "Jordan Buchman"],
               ["If 'plan A' didn't work the alphabet has 25 more letters.", "Unknown"],
-              ["I can count to two correctly!", "Adam Chehadi"],
+              ["While math is my jam, robotics is the bread to make the jam useful.", "Rahul Krishnan"],
               ["If we win, how big will the team dinner be?", "Jackson Chen"],
-              ["Ultra precise is more than just two words. It's a lifestyle.", "Rahul Krishnan and Adam Chehadi"],
-              ["Velocity is in ft/mile.", "Rahul Krishnan"],
+              ["Ultra precise is more than just two words. It's a lifestyle.", "Adam Chehadi"],
+              ["Robotics is like riding a bike. You have to keep moving forward.", "Rahul Krishnan"],
               ["The truth is like poetry, and most people hate poetry.", "Vikram Tholakapalli"]];
 
 //Returns a shuffled array. Used for carousel randomization.
