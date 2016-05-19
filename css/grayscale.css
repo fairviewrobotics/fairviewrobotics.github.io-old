@@ -157,13 +157,23 @@ a:focus {
 .rand-quote {
     text-shadow: 0 0 4px #FFF;
     font-size: 6vw !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .quote-author {
+  position: absolute;
     text-shadow: 0 0 4px #FFF;
     font-size: 4vw;
-    margin-left: 40vw;
-    margin-top: -4vh;
+    top: 65%;
+    transform: translateY(-50%);
+    right: 15%;
 }
 
 @media(min-width:768px) {
@@ -263,7 +273,6 @@ a:focus {
 
 .intro .intro-body {
     display: table-cell;
-    vertical-align: middle;
 }
 
 .intro .intro-body .brand-heading {
@@ -281,17 +290,9 @@ a:focus {
 }
 
 .brand-heading-content {
-  width: 90vw;
-  height: 50vh;
-  top: 25vh;
-  vertical-align: middle;
-  left: 5vw;
-  position: absolute;
-}
-
-.brand-heading {
-  height: 30%;
-  width: auto;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
 }
 
 .intro .intro-body .intro-text {
@@ -328,10 +329,14 @@ a:focus {
 }
 
 .btn-circle {
+    position: absolute;
     width: 70px;
     height: 70px;
-    margin-top: 15px;
-    padding: 7px 16px;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
     border: 2px solid #000;
     border-radius: 100% !important;
     font-size: 40px;
