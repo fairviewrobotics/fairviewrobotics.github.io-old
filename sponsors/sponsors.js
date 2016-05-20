@@ -5,10 +5,10 @@ var Sponsor = function(name, size, url) {
 };
 
 var sponsors = [
-  new Sponsor("Medtronic", 90, "http://medtronic.com"),
-  new Sponsor("Western Digital", 65, "http://www.wdc.com/"),
+  new Sponsor("Medtronic", 43, "http://medtronic.com"),
+  new Sponsor("Western Digital", 43, "http://www.wdc.com/"),
   new Sponsor("Youth Oppurtunities Program", 25, "https://bouldercolorado.gov/child-youth-family/youth-opportunities-program"),
-  new Sponsor("Sword and Stone Productions", 30, ""),
+  new Sponsor("Sword and Stone Productions", 32, ""),
   new Sponsor("MinuteKey", 30, "http://minutekey.com/"),
   new Sponsor("Ball", 30, "http://www.ball.com/aerospace"),
   new Sponsor("Lockheed Martin", 20, "http://www.lockheedmartin.com/"),
