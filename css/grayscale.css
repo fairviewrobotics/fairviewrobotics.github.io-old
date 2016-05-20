@@ -840,3 +840,20 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }
+
+#sponsors-outer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sponsor {
+  margin: 1vw;
+  opacity: 0.8;
+  transition: all 0.25s;
+}
+
+.sponsor:hover {
+  opacity: 1;
+}
