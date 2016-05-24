@@ -274,8 +274,13 @@ a:focus {
   width: 100%;
   left: 0;
   top: 0;
+  height: 100%;
   margin: 0;
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+.intro-mask.not-landing {
+  height: calc(25vw + 100px);
 }
 
 .intro .intro-body {
@@ -338,8 +343,8 @@ a:focus {
       height: calc(35vw + 100px) !important;
     }
 
-    #image-parallax.not-landing .intro-mask {
-      height: (35vw + 100px) !important;
+    .intro-mask.not-landing {
+      height: calc(35vw + 100px) !important;
     }
 
     #gallery-outer, .text-content {
