@@ -251,8 +251,8 @@ a:focus {
 #image-parallax.not-landing {
   height: calc(25vw + 100px) !important;
 }
-#image-parallax.not-landing .intro-mask {
-  height: (25vw + 100px) !important;
+.intro-mask.not-landing {
+  height: calc(25vw) !important;
 }
 
 .intro {
@@ -277,10 +277,6 @@ a:focus {
   height: 100%;
   margin: 0;
   background-color: rgba(255, 255, 255, 0.5);
-}
-
-.intro-mask.not-landing {
-  height: calc(25vw + 100px);
 }
 
 .intro .intro-body {
@@ -344,7 +340,7 @@ a:focus {
     }
 
     .intro-mask.not-landing {
-      height: calc(35vw + 100px) !important;
+      height: calc(35vw) !important;
     }
 
     #gallery-outer, .text-content {
@@ -874,14 +870,24 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sponsor {
   margin: 3vw;
   opacity: 0.8;
-  transition: all 0.25s;
+  transition: opacity 0.25s;
 }
 
 .sponsor:hover {
   opacity: 1;
+}
+
+@media(max-width:768px) {
+  .sponsor {
+    margin: 15vw;
+    transform: scale(1.8);
+  }
 }

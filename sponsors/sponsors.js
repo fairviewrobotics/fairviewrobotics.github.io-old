@@ -1,5 +1,5 @@
 var Sponsor = function(name, size, url) {
-  this.size = size;
+  this.size = size*0.9; // 0.9x is for the outer div's width being 90vw
   this.name = name;
   this.url = url;
 };
