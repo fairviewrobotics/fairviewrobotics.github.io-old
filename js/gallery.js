@@ -1,4 +1,5 @@
 var galleryResetTimeout;
+var currentImage = 0;
 
 var Gallery = function(location, amount) {
   this.location = location;
@@ -17,6 +18,7 @@ var showImage = function(image, state) {
   if(state) {
     $("body").addClass("noscroll");
     $("#image-full-outer").removeClass("non-bootstrap-hidden");
+    $(".image-full").attr("src", selectedGal.location + "/thumbnails/" + currentImage + ".jpg");
     $(".image-full").attr("src", image);
     checkWidth();
   }
@@ -46,6 +48,7 @@ var incrementImage = function() {
     secondDigit = "";
   }
 
+  currentImage = (secondDigit + "" + firstDigit).replace("/", "");
   var result = selectedGal.location + "/" + secondDigit + "" + firstDigit + ".jpg";
   showImage(result, true);
   checkWidth();
@@ -78,6 +81,7 @@ var decrementImage = function() {
     secondDigit = "";
   }
 
+  currentImage = (secondDigit + "" + firstDigit).replace("/", "");
   var result = selectedGal.location + "/" + secondDigit + "" + firstDigit + ".jpg";
   showImage(result, true);
   checkWidth();
@@ -88,6 +92,7 @@ var resetGallery = function() {
     $(this).remove();
   });
   clearTimeout(galleryResetTimeout);
+  currentImage = 0;
   galleryResetTimeout = setTimeout(function() {
     for(i = 0; i <= selectedGal.amount; i++) {
       $("#gallery-content").append(
@@ -112,7 +117,7 @@ var checkWidth = function() {
   if(iHeight >= wHeight*0.9) {
     $(".image-full").removeClass("width90");
   }
-}
+};
 
 $(window).resize(function() {
   checkWidth();
