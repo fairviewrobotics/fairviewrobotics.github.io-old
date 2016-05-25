@@ -132,6 +132,12 @@ $(document).ready(function() {
     showImage("", false);
   });
 
+  $(".image-full").click(function() {
+    if($(this).attr("src").search("loading") === -1) {
+      window.open($(this).attr("src") ,'_blank');
+    }
+  });
+
   $("#image-full-outer > img, #image-full-left, #image-full-right").click(function(event) {
     event.stopPropagation();
   });

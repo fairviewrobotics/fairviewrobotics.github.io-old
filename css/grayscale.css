@@ -730,6 +730,7 @@ body {
 .image-full {
   width: auto;
   height: 90%;
+  cursor: pointer;
   pointer-events: auto;
 }
 
