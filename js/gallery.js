@@ -18,18 +18,19 @@ var showImage = function(image, state) {
   if(state) {
     $("body").addClass("noscroll");
     $("#image-full-outer").removeClass("non-bootstrap-hidden");
-    $(".image-full").attr("src", selectedGal.location + "/thumbnails/" + currentImage + ".jpg");
-    $(".image-full").attr("src", image);
+    setTimeout(function() {$(".image-full").attr("src", image);}, 10);
     checkWidth();
   }
   else {
     $("body").removeClass("noscroll");
+    setTimeout(function() {$(".image-full").attr("src", "loading.jpg");}, 250);
     $("#image-full-outer").addClass("non-bootstrap-hidden");
   }
 };
 
 var incrementImage = function() {
   var src = $(".image-full").attr("src");
+  $(".image-full").attr("src", "loading.jpg");
   var firstDigit = src.substr(src.length - 5, 1);
   var secondDigit = src.substr(src.length - 6, 1);
   firstDigit++;
@@ -49,13 +50,14 @@ var incrementImage = function() {
   }
 
   currentImage = (secondDigit + "" + firstDigit).replace("/", "");
-  var result = selectedGal.location + "/" + secondDigit + "" + firstDigit + ".jpg";
+  var result = selectedGal.location + "/" + currentImage + ".jpg";
   showImage(result, true);
   checkWidth();
 };
 
 var decrementImage = function() {
   var src = $(".image-full").attr("src");
+  $(".image-full").attr("src", "loading.jpg");
   var firstDigit = src.substr(src.length - 5, 1);
   var secondDigit = src.substr(src.length - 6, 1);
   firstDigit--;
@@ -82,7 +84,7 @@ var decrementImage = function() {
   }
 
   currentImage = (secondDigit + "" + firstDigit).replace("/", "");
-  var result = selectedGal.location + "/" + secondDigit + "" + firstDigit + ".jpg";
+  var result = selectedGal.location + "/" + currentImage + ".jpg";
   showImage(result, true);
   checkWidth();
 };
