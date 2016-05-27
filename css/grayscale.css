@@ -102,6 +102,8 @@ a:focus {
 }
 
 .navbar-custom .navbar-brand {
+    width: 150px;
+    margin-left: -50px !important;
     font-weight: 700;
 }
 
