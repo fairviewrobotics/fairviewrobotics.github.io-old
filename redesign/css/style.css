@@ -69,3 +69,22 @@ nav a:hover {
 p {
   line-height: 1.4em;
 }
+
+#gallery {
+  display: flex;
+  align-items: middle;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#gallery a{
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+#gallery-nav {
+  display: flex;
+  justify-content: center;
+}

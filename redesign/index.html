@@ -10,6 +10,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.2/css/lightgallery.min.css" integrity="sha256-aE9ighQ16YCp5z2xXwuZCBvLUxbxy9/MzlSTsTH16Ro=" crossorigin="anonymous" />
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -50,10 +51,24 @@
         src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.2/js/lightgallery.min.js" crossorigin="anonymous"></script>
+  <script src="js/lg-thumbnail.min.js"></script>
 
   <script>
     changePage = function(){
-      $("main").load("partials/"+location.hash.replace("#","")+".html")
+      if (location.hash.indexOf("#gallery/") == 0){
+        if ($("#gallery").length == 0){
+          $(".main").load("partials/gallery.html", function(){
+            $("#gallery-container").load("partials/"+location.hash.replace("#","")+".html");
+          });
+        }
+        else{
+          $("#gallery-container").load("partials/"+location.hash.replace("#","")+".html");
+        }
+      }
+      else{
+        $(".main").load("partials/"+location.hash.replace("#","")+".html");
+      }
     }
     firstLoad = function() {
       if (location.hash == ""){
