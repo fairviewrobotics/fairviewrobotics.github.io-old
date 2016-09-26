@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Fairview Robotics - Team 2036</title>
+  <meta name="description" content="Fairview Robotics">
+  <meta name="author" content="Fairview Robotics">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <header>
+    <div class="top">
+      <div class="icons">
+        <a href="https://github.com/fairviewrobotics"><i class="fa fa-2x fa-fw fa-github"></i> GitHub</a>
+        <a href="mailto:fairviewrobotics@gmail.com"><i class="fa fa-2x fa-fw fa-envelope"></i> Email</a>
+      </div>
+      <img
+        src="img/logo.svg"
+        alt="Fairview Robotics logo"
+        id="logo" />
+      <div class="icons">
+        <a href="https://www.youtube.com/user/FairviewRobotics2036"><i class="fa fa-2x fa-fw fa-youtube"></i> YouTube</a>
+        <a href="https://twitter.com/FHSKnights2036"><i class="fa fa-2x fa-fw fa-twitter-square"></i> Twitter</a>
+      </div>
+    </div>
+    <div class="bottom">
+      <nav>
+        <a href="#about">About</a>
+        <a href="#sponsors">Sponsors</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#calendar">Calendar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+  </main>
+
+  <script src="https://use.fontawesome.com/7ffe6fe04e.js"></script>
+  <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+
+  <script>
+    changePage = function(){
+      $("main").load("partials/"+location.hash.replace("#","")+".html")
+    }
+    firstLoad = function() {
+      if (location.hash == ""){
+        location.hash = "#about";
+      }
+      else {
+        changePage();
+      }
+    }
+
+    window.onhashchange = changePage;
+    window.onload = firstLoad;
+  </script>
+
+</body>
+</html>
