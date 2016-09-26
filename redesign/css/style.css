@@ -64,9 +64,6 @@ nav a:hover {
 .main {
   margin-left: 20vw;
   margin-right: 20vw;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 
 p {
