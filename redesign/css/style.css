@@ -60,6 +60,7 @@ nav a:hover {
   background-color: #771F1F;
 }
 
+/*
 @media (max-width:1000px){
   .main {
     margin-left: 5vw;
@@ -73,7 +74,12 @@ nav a:hover {
     margin-right: 20vw;
   }
 }
+*/
 
+.main {
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
 p {
   line-height: 1.4em;
 }
