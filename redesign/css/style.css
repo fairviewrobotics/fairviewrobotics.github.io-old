@@ -15,7 +15,6 @@ header {
 }
 
 .bottom {
-  width: 30vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,9 +60,18 @@ nav a:hover {
   background-color: #771F1F;
 }
 
-.main {
-  margin-left: 20vw;
-  margin-right: 20vw;
+@media (max-width:1000px){
+  .main {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+}
+
+@media (min-width:1001px){
+  .main {
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
 }
 
 p {
