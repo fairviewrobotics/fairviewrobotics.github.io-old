@@ -73,15 +73,16 @@ p {
 #gallery {
   display: flex;
   align-items: middle;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
-#gallery a{
+#gallery a img{
   margin-left: 0.3em;
   margin-right: 0.3em;
   margin-top: 0.3em;
   margin-bottom: 0.3em;
+  border: 1px solid;
 }
 
 #gallery-nav {
