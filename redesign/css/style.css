@@ -89,3 +89,19 @@ p {
   display: flex;
   justify-content: center;
 }
+
+.sponsors{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+a.sponsor{
+  margin: 1em 1em 1em 1em;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+a.sponsor:hover > img{
+  visibility: hidden;
+}
