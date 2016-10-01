@@ -87,7 +87,7 @@ p {
 #gallery {
   display: flex;
   align-items: middle;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
