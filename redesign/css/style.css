@@ -91,12 +91,19 @@ p {
   flex-wrap: wrap;
 }
 
-#gallery a img{
+#gallery a {
   margin-left: 0.3em;
   margin-right: 0.3em;
   margin-top: 0.3em;
   margin-bottom: 0.3em;
   border: 1px solid;
+  line-height: 0;
+  background-color: #771F1F;
+}
+
+#gallery a img:hover {
+  filter: opacity(60%);
+  -webkit-filter: opacity(60%);
 }
 
 #gallery-nav {
