@@ -6,14 +6,14 @@
 
 //set a quote to the homepage. can be randomized i guess
 var setQuote = function(quote, author) {
-  $(".rand-quote").html("<i>\"" + quote + "\"</i>");
+  $(".rand-quote").html("\"" + quote + "\"");
   $(".quote-author").html("<i>- " + author.toUpperCase() + "</i>");
 };
 
 var quotes = [["Oh my god that was terrifying. Do it again.", "David Rappaport"],
               ["Did you know that you can buy 2 gallons of 8 molar HCl at Home Depot at 8:50 on a Tuesday night?", "Wyatt Peck"],
               ["The location of this meeting and the location of my body will not be identical at any point during the time this meeting is occuring.", "Jordan Buchman"],
-              ["If plan A didn't work the alphabet has 25 more letters.", "Unknown"],
+              ["If plan A didn't work, the alphabet has 25 more letters.", "Unknown"],
               ["While math is my jam, robotics is the bread to make the jam useful.", "Rahul Krishnan"],
               ["If we win, how big will the team dinner be?", "Jackson Chen"],
               ["Ultra precise is more than just two words. It's a lifestyle.", "Adam Chehadi"],
@@ -67,7 +67,7 @@ $(function() {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
+        }, 1500, 'easeInOut');
         event.preventDefault();
     });
 
@@ -98,11 +98,10 @@ $(function() {
     //Change the about image to a random x-coordinate
     //Therefore users can see everyone!
     $(".about-section").css("background-position",
-                            (Math.random()*window.innerHeight*1.25 - window.innerHeight*0.25)
-                            + "px 50%");
+                            (Math.random()*window.innerHeight*1.25 - window.innerHeight*0.25) + "px 50%");
 
     //Sets a random quote upon the page loading
-    randQuoteArr = quotes[Math.floor(Math.random()*quotes.length)]
+    randQuoteArr = quotes[Math.floor(Math.random()*quotes.length)];
     setQuote(randQuoteArr[0], randQuoteArr[1]);
 });
 

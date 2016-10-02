@@ -12,8 +12,8 @@ body {
     width: 100%;
     height: 100%;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #fff;
-    background-color: #000;
+    color: #000;
+    background-color: #fff;
     overflow-x: hidden;
 }
 
@@ -27,6 +27,8 @@ html {
 }
 
 .page-scroll {
+  width: auto;
+  height: auto;
   z-index: 100;
 }
 
@@ -76,29 +78,24 @@ a:focus {
 
 .navbar-custom {
     margin-bottom: 0;
-    border-bottom: 1px solid rgba(255,255,255,.3);
+    border-bottom: 1px solid rgba(0,0,0,.3);
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: #000;
+    background-color: #fff;
 }
 
 #header-logo, #header-logo-white {
+    cursor: pointer;
     width: 20%;
     height: auto;
     position: absolute;
-    left: 20px;
+    left: -10px;
     top: 12.5px;
     opacity: 1;
 }
 
-#header-logo {
-    z-index: 1;
-    opacity: 0;
-}
-
-#header-logo-white {
-    z-index: -1;
-    opacity: 1;
+.collapse {
+  margin-right: -50px !important;
 }
 
 .navbar-custom .navbar-brand {
@@ -114,7 +111,7 @@ a:focus {
 .navbar-custom .navbar-brand .navbar-toggle {
     padding: 4px 6px;
     font-size: 16px;
-    color: #fff;
+    color: #000;
 }
 
 .navbar-custom .navbar-brand .navbar-toggle:focus,
@@ -123,7 +120,7 @@ a:focus {
 }
 
 .navbar-custom a {
-    color: #fff;
+    color: #000;
 }
 
 .navbar-custom .nav li a {
@@ -134,7 +131,7 @@ a:focus {
 
 .navbar-custom .nav li a:hover {
     outline: 0;
-    color: rgba(255,255,255,.8);
+    color: #b20202;
     background-color: transparent;
 }
 
@@ -157,22 +154,23 @@ a:focus {
 }
 
 .rand-quote {
-    text-shadow: 0 0 4px #FFF;
-    font-size: 6vw !important;
+    font-size: 3.5vw;
     position: absolute;
+    font-weight: 100;
     top: 50%;
     transform: translateY(-50%);
     left: 0;
     right: 0;
+    color: #000;
     margin-left: auto;
     margin-right: auto;
 
 }
 
 .quote-author {
-  position: absolute;
-    text-shadow: 0 0 4px #FFF;
-    font-size: 4vw;
+    color: #000;
+    position: absolute;
+    font-size: 2vw;
     top: 65%;
     transform: translateY(-50%);
     right: 15%;
@@ -180,18 +178,18 @@ a:focus {
 
 @media(min-width:768px) {
     .rand-quote {
-        font-size: 3vw !important;
+        font-size: 3vw;
     }
 
     .quote-author {
-        font-size: 1vw !important;
+        font-size: 2vw;
     }
 
-    #header-logo, #header-logo-white {
+    #header-logo {
         height: 90%;
         width: auto;
         position: absolute;
-        left: 20px;
+        left: -10px;
         top: 5%;
         opacity: 1;
         transition: opacity 0.5s;
@@ -202,10 +200,6 @@ a:focus {
         z-index: 1;
     }
 
-    #header-logo-white {
-        z-index: -1;
-        opacity: 0;
-    }
     .navbar-custom {
         padding: 20px 0;
         border-bottom: 0;
@@ -218,14 +212,8 @@ a:focus {
 
     .navbar-custom.top-nav-collapse {
         padding: 0;
-        border-bottom: 1px solid rgba(255,255,255,.3);
-        background: #000;
-    }
-    .navbar-custom.top-nav-collapse #header-logo {
-        opacity: 0;
-    }
-    .navbar-custom.top-nav-collapse #header-logo-white {
-        opacity: 1;
+        border-bottom: 1px solid rgba(0,0,0,.3);
+        background: #fff;
     }
 }
 
@@ -244,8 +232,6 @@ a:focus {
   -o-background-size: cover;
   transition: background-image 1s, background-size 0s;
   -webkit-transition: background-image 1s, background-size 0s;
-  filter: grayscale();
-  -webkit-filter: grayscale();
   transition-delay: 2s;
   -webkit-transition-delay: 2s; /*to let the images preload*/
 }
@@ -268,7 +254,6 @@ a:focus {
 
 .intro > * {
     color: black !important;
-    text-shadow: 0 0 3px solid #fff;
 }
 
 .intro-mask {
@@ -278,7 +263,7 @@ a:focus {
   top: 0;
   height: 100%;
   margin: 0;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .intro .intro-body {
@@ -302,24 +287,29 @@ a:focus {
 .brand-heading-content {
   width: 100vw;
   height: 100vh;
+  padding: 50px;
   position: relative;
 }
 
 .intro .intro-body .intro-text {
     font-size: 24px;
     font-weight: bold;
-    color: #000;
-}
-
-.outline-text {
-    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+    color: #fff;
 }
 
 @media(max-width:768px) {
+    .about-outer {
+      margin-top: 40vw !important;
+    }
+
+    #header-logo {
+      left: -10px;
+      height: 45px;
+      top: 5px;
+      left: 0.5px;
+      width: auto;
+    }
+
     .intro {
         height: 100%;
         padding: 0;
@@ -437,8 +427,15 @@ a:focus {
     }
 }
 
+.about-outer {
+  width: 80%;
+  margin-top: 30vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .content-section {
-  border-top: 25px solid black;
+  border-top: 25px solid white;
 }
 
 #about {
@@ -447,82 +444,16 @@ a:focus {
   overflow: hidden;
 }
 
-.about-section {
-  padding: 0;
-  z-index: 1;
-  height: auto;
-  width: 100vw;
-  overflow: auto;
-  color: #fff;
-  background-image: url('../img/2016-team.jpg');
-  background-size: cover;
-  background-position: 0px 25%;
-  background-color: #000;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
-
-.whatwedo-section {
-  background-image: url('../img/2016-bot.jpg');
-}
-
-.meetings-section {
-  background-image: url('../img/2016-meeting.jpg');
-  background-position: 0px 50%;
-}
-
-.gradient-1 > .container {
-  height: auto;
-  padding: 20px;
-  width: 100vw !important;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&1+0,1+40,0.4+100 */
-  background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0.4) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#66000000',GradientType=1 ); /* IE6-9 */
-
-}
-
-.gradient-2 > .container {
-  height: auto;
-  padding: 20px;
-  width: 100vw !important;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.4+0,1+60,1+100 */
-  background: -moz-linear-gradient(left,  rgba(0,0,0,0.4) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
-
-}
-
-.gradient-2 p, .gradient-2 h2 {
-  text-align: right;
-}
-
-.gradient-2 .text-container {
-  float: right;
-}
-
-.about-section p {
-  font-size: 2.5vh;
-}
-
-.about-section h2 {
-  font-size: 5vh;
-}
-
-.text-container {
-  height: auto;
-  width: 50vw;
-  padding-left: 50px;
-}
-
 .main-h2 {
-  font-size: 4vh;
-  color: rgba(193, 39, 45, 1);
-  text-shadow: 0 0 5px #000;
+  margin-top: 100px;
+  font-size: 6vh;
+  color: #000;
+  font-weight: 100;
+}
+
+.about-outer > p {
+  font-weight: 100;
+  line-height: 1.6;
 }
 
 @media(max-width:768px) {
@@ -538,9 +469,8 @@ a:focus {
 .calendar-section {
     width: 100%;
     padding: 50px 0;
-    color: #fff;
-    background-color: #000;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/2015_robot_edit.jpg) no-repeat center center scroll;
+    color: #000;
+    background-color: #fff;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -549,15 +479,14 @@ a:focus {
 
 .visible-xs > iframe, .visible-sm > iframe, .visible-md > iframe,
 .visible-lg > iframe {
-  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 1) !important;
-  background-color: rgba(0, 0, 0, 1) !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .3);
 }
 
 .team-section {
     width: 100%;
     padding: 50px 0;
-    color: #fff;
-    background-color: #000;
+    color: #000;
+    background-color: #fff;
     background: url(../img/2014_team_edit.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -568,9 +497,9 @@ a:focus {
 .download-section{
     width: 100%;
     padding: 50px 0;
-    color: #fff;
+    color: #000;
     background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
-    background-color: #000;
+    background-color: #fff;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -615,7 +544,7 @@ a:focus {
 .btn-default.selected {
     border: 1px solid #c1272d;
     outline: 0;
-    color: #000;
+    color: #fff;
     background-color: #c1272d;
 }
 
@@ -681,7 +610,7 @@ body {
 }
 
 .modal {
-    color: black;
+    color: #fff;
 }
 
 .captain-profile {
@@ -696,13 +625,13 @@ body {
 .page-title {
   position: absolute;
   font-size: 10vw;
+  font-weight: 100;
   text-align: center;
   display: block;
   left: 0;
   right: 0;
   top: calc(5vw + 50px);
-  color: black;
-  text-shadow: 0 0 4px #fff;
+  color: #000;
 }
 
 @media(max-width:450px) {
@@ -716,7 +645,7 @@ body {
   height: 100vh;
   width: 100vw;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   margin: 0;
   padding: 0;
   z-index: 1000000;
@@ -752,7 +681,7 @@ body {
   right: 10px;
   opacity: 0.8;
   cursor: pointer;
-  color: white;
+  color: #000;
   transition: none;
 }
 
@@ -768,7 +697,7 @@ body {
 
 #gallery-outer {
   width: 100vw;
-  background-color: black;
+  background-color: #fff;
   top: 25vw;
   position: relative;
   padding: 5px;
@@ -784,11 +713,10 @@ body {
 }
 
 .image-thumb-outer {
-  border: 2px solid #666;
-  height: 100px;
-  background-color: black;
+  border: 2px solid #aaa;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  height: auto;
   width: auto;
-  padding: 5px;
   margin: 15px;
   cursor: pointer;
   display: inline-block;
@@ -810,7 +738,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
-  color: white;
+  color: #000;
   opacity: 0.8;
   cursor: pointer;
   transition: none;
@@ -827,7 +755,7 @@ body {
 
 .full-arrow:hover {
   opacity: 1;
-  color: white;
+  color: #000;
 }
 
 #gallery-header {
@@ -854,7 +782,7 @@ body {
 
 .text-content {
   width: 100vw;
-  background-color: black;
+  background-color: #fff;
   top: 25vw;
   position: relative;
   border: 0;
@@ -873,7 +801,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  width: 90%;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
 }
