@@ -149,6 +149,24 @@ a:focus {
     color: #fff;
 }
 
+#we-are {
+  font-size: 8vw;
+  position: absolute;
+  font-weight: 100;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  color: #000;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#we-are-inner {
+  font-weight: 900;
+  color: #b20202;
+}
+
 .rand-quote {
     font-size: 3.5vw;
     position: absolute;
@@ -220,7 +238,7 @@ a:focus {
   background-color: black;
   position: fixed;
   z-index: -1;
-  background-image: url('../img/intro-1.jpg');
+  background-image: url('../img/new-intro/blank.png');
   background-position: 50% 0px;
   -webkit-background-size: cover;
   -moz-background-size: cover;

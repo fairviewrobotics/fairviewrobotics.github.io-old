@@ -4,20 +4,15 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-//set a quote to the homepage. can be randomized i guess
-var setQuote = function(quote, author) {
-  $(".rand-quote").html("\"" + quote + "\"");
-  $(".quote-author").html("<i>- " + author.toUpperCase() + "</i>");
-};
-
-var quotes = [["Oh my god that was terrifying. Do it again.", "David Rappaport"],
-              ["Did you know that you can buy 2 gallons of 8 molar HCl at Home Depot at 8:50 on a Tuesday night?", "Wyatt Peck"],
-              ["The location of this meeting and the location of my body will not be identical at any point during the time this meeting is occuring.", "Jordan Buchman"],
-              ["If plan A didn't work, the alphabet has 25 more letters.", "Unknown"],
-              ["While math is my jam, robotics is the bread to make the jam useful.", "Rahul Krishnan"],
-              ["If we win, how big will the team dinner be?", "Jackson Chen"],
-              ["Ultra precise is more than just two words. It's a lifestyle.", "Adam Chehadi"],
-              ["Robotics is like riding a bike. You have to keep moving forward.", "Rahul Krishnan"]];
+//unused quotes. Leaving in case they could be useful later.
+// var quotes = [["Oh my god that was terrifying. Do it again.", "David Rappaport"],
+//               ["Did you know that you can buy 2 gallons of 8 molar HCl at Home Depot at 8:50 on a Tuesday night?", "Wyatt Peck"],
+//               ["The location of this meeting and the location of my body will not be identical at any point during the time this meeting is occuring.", "Jordan Buchman"],
+//               ["If plan A didn't work, the alphabet has 25 more letters.", "Unknown"],
+//               ["While math is my jam, robotics is the bread to make the jam useful.", "Rahul Krishnan"],
+//               ["If we win, how big will the team dinner be?", "Jackson Chen"],
+//               ["Ultra precise is more than just two words. It's a lifestyle.", "Adam Chehadi"],
+//               ["Robotics is like riding a bike. You have to keep moving forward.", "Rahul Krishnan"]];
 
 //Returns a shuffled array. Used for carousel randomization.
 function shuffle(array) {
@@ -67,33 +62,45 @@ $(function() {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOut');
+        }, 1500, 'easeInOutQuad');
         event.preventDefault();
     });
 
     //Immediately check the window's scroll
     scrollAdjustments();
 
-    // Intro image shifting
-    var imagesArr = [];
-    currImage = 0;
-    // Add intro-1.jpg to intro-15.jpg
-    for(var i = 1; i <= 20; i++) {
-      imagesArr.push("intro-" + i + ".jpg");
-    }
+    setTimeout(function() {
+      var currImage = 0;
 
-    //shuffle imagesArr
-    imagesArr = shuffle(imagesArr);
+      // Intro image shifting
+      var descriptions = ["a team", "learners", "builders", "planners", "coders", "cheerleaders", "workers", "knights", "doers", "double-checkers", "thinkers", "2036"];
 
-    $("#image-parallax").css("background-image", "url('img/" + (imagesArr[0]) +"')");
-    //go through each image
-    setInterval(function() {
-      currImage++;
-      if(currImage >= imagesArr.length) {
-        currImage = 0;
-      }
-      $("#image-parallax").css("background-image", "url('img/" + (imagesArr[currImage]) +"')");
-    }, 5000);
+      //shuffle that array
+      descriptions = shuffle(descriptions);
+
+      $("#image-parallax").css("background-image", "url('img/new-intro/" + (descriptions[currImage]) +".jpg')");
+
+      //there's a transition delay going on so the images can have time to load
+      setTimeout(function() {
+        $('#we-are').animate({'opacity': 0}, 500, function () {
+          $("#we-are-inner").html(descriptions[currImage]);
+        }).animate({'opacity': 1}, 1000);
+      }, 1500);
+
+      //go through each image
+      setInterval(function() {
+        currImage++;
+        if(currImage >= descriptions.length) {
+          currImage = 0;
+        }
+        $("#image-parallax").css("background-image", "url('img/new-intro/" + (descriptions[currImage]) +".jpg')");
+        setTimeout(function() {
+          $('#we-are').animate({'opacity': 0}, 500, function () {
+            $("#we-are-inner").html(descriptions[currImage]);
+          }).animate({'opacity': 1}, 1000);
+        }, 1500);
+      }, 5000);
+    }, 500);
 
     //Change the about image to a random x-coordinate
     //Therefore users can see everyone!
