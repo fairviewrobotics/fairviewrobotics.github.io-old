@@ -43,16 +43,8 @@ h6 {
 
 p {
     margin: 0 0 25px;
-    font-size: 18px;
+    font-size: 1.2em;
     line-height: 1.5;
-}
-
-@media(min-width:768px) {
-    p {
-        margin: 0 0 35px;
-        font-size: 20px;
-        line-height: 1.6;
-    }
 }
 
 a {
@@ -478,7 +470,7 @@ a:focus {
 
 .main-h2 {
   margin-top: 100px;
-  font-size: 6vh;
+  font-size: 2.75em;
   color: #000;
   font-weight: 100;
 }
@@ -620,30 +612,6 @@ footer {
 footer p {
     margin: 0;
     text-align: center;
-}
-
-::-moz-selection {
-    text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(255,255,255,.2);
-}
-
-::selection {
-    text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(255,255,255,.2);
-}
-
-img::selection {
-    background: 0 0;
-}
-
-img::-moz-selection {
-    background: 0 0;
-}
-
-body {
-    webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
 
 .modal {
