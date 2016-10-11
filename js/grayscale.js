@@ -58,10 +58,10 @@ $(window).scroll(function() {
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
-    $('a.page-scroll').bind('click', function(event) {
+    $('a.btn-circle').bind('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
+            scrollTop: 500
         }, 1500, 'easeInOutQuad');
         event.preventDefault();
     });
@@ -106,10 +106,6 @@ $(function() {
     //Therefore users can see everyone!
     $(".about-section").css("background-position",
                             (Math.random()*window.innerHeight*1.25 - window.innerHeight*0.25) + "px 50%");
-
-    //Sets a random quote upon the page loading
-    randQuoteArr = quotes[Math.floor(Math.random()*quotes.length)];
-    setQuote(randQuoteArr[0], randQuoteArr[1]);
 });
 
 // Closes the Responsive Menu on Menu Item Click

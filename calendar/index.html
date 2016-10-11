@@ -9,16 +9,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Black Knights - Team 2036</title>
+    <title>Black Knights - Calendar</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
+    <link href="../css/grayscale.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
@@ -29,25 +29,25 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
 
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll">
+                <a class="navbar-brand page-scroll" href="../index.html">
                 </a>
             </div>
 
-            <a class="page-scroll" href="/">
-              <img src="img/logo.png" id="header-logo"/>
+            <a class="page-scroll" href="../index.html">
+              <img src="../img/logo.png" id="header-logo"/>
             </a>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -55,19 +55,19 @@
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
-                        <a href="#page-top"></a>
+                        <a href="/"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="about/index.html">About</a>
+                        <a class="page-scroll" href="../about/index.html">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="calendar/index.html">Calendar</a>
+                        <a class="page-scroll" href="../calendar/index.html">Calendar</a>
                     </li>
                     <li>
-                      <a class="page-scroll" href="sponsors/index.html">Sponsors</a>
+                      <a class="page-scroll" href="../sponsors/index.html">Sponsors</a>
                     </li>
                     <li>
-                      <a class="page-scroll" href="gallery/index.html">Gallery</a>
+                      <a class="page-scroll" href="../gallery/index.html">Gallery</a>
                     </li>
                 </ul>
             </div>
@@ -76,36 +76,35 @@
         <!-- /.container -->
     </nav>
 
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-mask">
-        </div>
-        <div id="image-parallax">
-        </div>
-        <div class="intro-body">
+    <div class="intro-mask not-landing">
+    </div>
+    <div id="image-parallax" class="not-landing" style="position: absolute; background-image: url('../img/intro-6.jpg'); background-position: 50% 75px;">
+    </div>
+    <h1 class="page-title">Calendar</h1>
+    <div id="calendar" class="text-center">
+        <div class="calendar-section">
             <div class="container">
-                <div class="row">
-                    <div class="heading-outer">
-                      <div class="brand-heading-outer">
-                        <div class="brand-heading-content">
-                          <h1 id="we-are">we are <span id="we-are-inner">2036</span></h1>
-                          <!-- <img class="brand-heading" src="img/logo.svg"> -->
-                          <a href="#calendar" class="btn btn-circle page-scroll">
-                              <i class="fa fa-angle-double-down animated"></i>
-                          </a>
-                      </div>
-                 </div>
+                <h2 class="main-h2">Upcoming Events</h2>
+                <div class="visible-xs">
+                    <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=fairviewrobotics%40gmail.com&amp;color=%23060D5E&amp;ctz=America%2FDenver" style=" border-width:0 " width="100%" height="300" frameborder="0" scrolling="no"></iframe>
+                </div>
+                <div class="visible-sm">
+                    <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showTabs=0&amp;showCalendars=0&amp;showPrint=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=fairviewrobotics%40gmail.com&amp;color=%23711616&amp;ctz=America%2FDenver" style=" border-width:0 " width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+                </div>
+                <div class="visible-md">
+                    <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showTabs=0&amp;showCalendars=0&amp;showPrint=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=fairviewrobotics%40gmail.com&amp;color=%23711616&amp;ctz=America%2FDenver" style=" border-width:0 " width="90%" height="400" frameborder="0" scrolling="no"></iframe>
+                </div>
+                <div class="visible-lg">
+                    <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showTabs=0&amp;showCalendars=0&amp;showPrint=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=fairviewrobotics%40gmail.com&amp;color=%23711616&amp;ctz=America%2FDenver" style=" border-width:0 " width="80%" height="500" frameborder="0" scrolling="no"></iframe>
+                </div>
             </div>
         </div>
-    </header>
+    </div>
 
     <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center" style="padding: 5vw 0">
+    <section id="contact" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Us</h2>
-                <p>Feel free to contact us about joining the team, sponsorship, or really anything else!</p>
-                </p>
                 <ul class="list-inline banner-social-buttons">
                     <li>
                         <a data-toggle="modal" data-target="#emailModal" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-envelope"></span> <span class="network-name">Email</span></a>
@@ -150,19 +149,16 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
+    <script src="../js/jquery.easing.min.js"></script>
 
     <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
+    <script type="../text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
     <!-- Google Analytics -->
     <script>

@@ -317,6 +317,10 @@ a:focus {
       margin-top: 40vw !important;
     }
 
+    #calendar {
+      margin-top: 40vw;
+    }
+
     #gallery-content {
       width: 100% !important;
     }
@@ -457,10 +461,19 @@ a:focus {
   border-top: 25px solid white;
 }
 
+#calendar {
+  margin-top: 30vw;
+}
+
 #about {
   height: auto;
   width: 100vw;
   overflow: hidden;
+}
+
+#contact, footer {
+  width: 100vw;
+  background-color: #fff;
 }
 
 .main-h2 {
