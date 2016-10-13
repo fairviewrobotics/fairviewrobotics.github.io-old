@@ -100,7 +100,7 @@ $(function() {
           }).animate({'opacity': 1}, 1000);
         }, 1500);
       }, 5000);
-    }, 500);
+    }, 2000);
 
     //Change the about image to a random x-coordinate
     //Therefore users can see everyone!
