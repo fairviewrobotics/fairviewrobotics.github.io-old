@@ -457,11 +457,13 @@ a:focus {
   width: 25vw;
   height: auto;
   clear: both;
+  margin: 0;
 }
 
 .about-img.left {
   float: left;
   margin-right: 2em;
+  clear: left;
 }
 
 .about-img.right {
@@ -486,6 +488,7 @@ a:focus {
 
 .main-h2 {
   margin-top: 100px;
+  margin-bottom: 0;
   font-size: 2.75em;
   color: #000;
   font-weight: 100;
