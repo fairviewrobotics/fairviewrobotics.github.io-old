@@ -5,21 +5,19 @@ var Sponsor = function(name, size, url) {
 };
 
 var sponsors = [
-  new Sponsor("Medtronic", 43, "http://medtronic.com"),
-  new Sponsor("Western Digital", 43, "http://www.wdc.com/"),
-  new Sponsor("Youth Oppurtunities Program", 25, "https://bouldercolorado.gov/child-youth-family/youth-opportunities-program"),
-  new Sponsor("Sword and Stone Productions", 32, ""),
-  new Sponsor("MinuteKey", 30, "http://minutekey.com/"),
-  new Sponsor("Ball", 30, "http://www.ball.com/aerospace"),
-  new Sponsor("Lockheed Martin", 20, "http://www.lockheedmartin.com/"),
-  new Sponsor("Hitachi", 20, "http://www.hitachi.us/"),
-  new Sponsor("QuickLeft", 20, "https://quickleft.com/"),
+  new Sponsor("Medtronic", 50, "http://medtronic.com"),
+  new Sponsor("Ball", 40, "http://www.ball.com/aerospace"),
+  new Sponsor("Neya Systems", 30, "http://neyasystems.com/"),
+  new Sponsor("Anker", 25, "https://www.anker.com/"),
+  new Sponsor("Spire", 30, "https://spire.com/"),
+  new Sponsor("Beaujos", 15, "http://www.beaujos.com/"),
+  new Sponsor("Cosmos", 15, "http://cosmospizza.com/"),
   new Sponsor("PizzaRev", 10, "http://pizzarev.com/")
 ];
 
 $(document).ready(function() {
   for(var i = 0; i < sponsors.length; i++) {
     $("#sponsors-outer").append(
-      "<a class='sponsor' href='"+sponsors[i].url+"'><img src='logos/"+sponsors[i].name+".png' style='height: auto; width: "+sponsors[i].size+"vw;'/></a>");
+      "<a class='sponsor' href='"+sponsors[i].url+"'><img src='logos/"+sponsors[i].name+".png' alt="+sponsors[i].name+" style='height: auto; width: "+sponsors[i].size+"vw;'/></a>");
   }
 });
