@@ -13,7 +13,7 @@ var galleries = {
   bag2016: new Gallery("2016-bag", 30)
 };
 
-var selectedGal = galleries.comp2016;
+var selectedGal = galleries.build2017;
 
 var showImage = function(image, state) {
   if(state) {
