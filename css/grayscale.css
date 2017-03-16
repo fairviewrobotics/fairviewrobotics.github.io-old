@@ -751,8 +751,8 @@ footer p {
 }
 
 .image-thumb-outer {
-  border: 2px solid #aaa;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border: 2px solid #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   height: auto;
   width: auto;
   margin: 15px;
@@ -763,7 +763,7 @@ footer p {
 }
 
 .image-thumb-outer:hover {
-  border: 2px solid #822;
+  border: 2px solid #b20202;
 }
 
 .image-thumb {
