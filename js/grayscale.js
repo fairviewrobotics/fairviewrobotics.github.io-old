@@ -73,7 +73,7 @@ $(function() {
       var currImage = 0;
 
       // Intro image shifting
-      var descriptions = ["a team", "learners", "builders", "planners", "coders", "cheerers", "workers", "knights", "doers", "technicians", "thinkers", "2036"];
+      var descriptions = ["a team", "learners", "builders", "planners", "coders", "cheerers", "workers", "knights", "doers", "technicians", "thinkers", "scouters", "2036"];
 
       //shuffle that array
       descriptions = shuffle(descriptions);

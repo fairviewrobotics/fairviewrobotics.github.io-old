@@ -7,13 +7,14 @@ var Gallery = function(location, amount) {
 };
 
 var galleries = {
+  comp2017: new Gallery("2017-comp", 19),
   build2017: new Gallery("2017-build", 17),
   comp2016: new Gallery("2016-comp", 26),
   build2016: new Gallery("2016-build", 35),
   bag2016: new Gallery("2016-bag", 30)
 };
 
-var selectedGal = galleries.build2017;
+var selectedGal = galleries.comp2017;
 
 var showImage = function(image, state) {
   if(state) {

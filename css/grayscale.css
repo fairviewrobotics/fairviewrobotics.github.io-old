@@ -297,6 +297,87 @@ a:focus {
   position: relative;
 }
 
+#social-media-home {
+  height: 10vh;
+  width: 30vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  bottom: 0;
+}
+
+#social-media-footer {
+  margin-left: auto;
+  margin-right: auto;
+  height: 10vh;
+  width: 30vw;
+}
+
+#social-media-outer, #red-social-media-outer {
+  display: flex;
+  position: absolute;
+  height: 10vh;
+  width: 30vw;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 10;
+}
+
+#red-social-media-outer {
+  z-index: 9;
+}
+
+.social-icon {
+  height: 1.5em;
+  width: 3em;
+  cursor: pointer;
+  background-size: auto 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transition: opacity 0.25s;
+}
+
+.social-icon:hover {
+  opacity: 0;
+}
+.social-icon.red:hover {
+  opacity: 1 !important;
+}
+
+.social-instagram {
+  background-image: url('../img/social-media/instagram.png');
+}
+.social-twitter {
+  background-image: url('../img/social-media/twitter.png');
+}
+.social-facebook {
+  background-image: url('../img/social-media/facebook.png');
+}
+.social-youtube {
+  background-image: url('../img/social-media/youtube.png');
+}
+.social-github {
+  background-image: url('../img/social-media/github.png');
+}
+
+.social-instagram.red {
+  background-image: url('../img/social-media/instagram-red.png');
+}
+.social-twitter.red {
+  background-image: url('../img/social-media/twitter-red.png');
+}
+.social-facebook.red {
+  background-image: url('../img/social-media/facebook-red.png');
+}
+.social-youtube.red {
+  background-image: url('../img/social-media/youtube-red.png');
+}
+.social-github.red {
+  background-image: url('../img/social-media/github-red.png');
+}
+
 .intro .intro-body .intro-text {
     font-size: 24px;
     font-weight: bold;
@@ -638,7 +719,7 @@ ul.banner-social-buttons {
 
 footer {
   width: 100vw;
-  padding: 50px 0;
+  margin-bottom: 5em;
 }
 
 footer p {
@@ -763,7 +844,7 @@ footer p {
 }
 
 .image-thumb-outer:hover {
-  border: 2px solid #b20202;
+  border: 2px solid #b2020;
 }
 
 .image-thumb {
@@ -858,5 +939,9 @@ footer p {
   .sponsor {
     margin: 15vw;
     transform: scale(1.8);
+  }
+
+  #social-media-home, #social-media-footer, #social-media-outer, #red-social-media-outer {
+    width: 80vw;
   }
 }
