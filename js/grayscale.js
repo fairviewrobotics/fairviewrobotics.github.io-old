@@ -78,6 +78,11 @@ $(function() {
       //shuffle that array
       descriptions = shuffle(descriptions);
 
+      //make sure it doesn't start with 2036 again
+      if(descriptions[0] === "2036") {
+        descriptions = descriptions.push(descriptions.shift());
+      }
+
       $("#image-parallax").css("background-image", "url('img/new-intro/" + (descriptions[currImage]) +".jpg')");
 
       //there's a transition delay going on so the images can have time to load
