@@ -304,7 +304,7 @@ a:focus {
   left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
-  bottom: 0;
+  bottom: 2em;
 }
 
 #social-media-footer {
@@ -312,6 +312,7 @@ a:focus {
   margin-right: auto;
   height: 10vh;
   width: 30vw;
+  margin-bottom: 5em;
 }
 
 #social-media-outer, #red-social-media-outer {
@@ -326,6 +327,22 @@ a:focus {
 
 #red-social-media-outer {
   z-index: 9;
+}
+
+#social-email {
+  font-size: 1em;
+  text-align: center;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 9vh;
+  position: absolute;
+  color: #000;
+}
+
+#social-email:hover {
+  color: #b20202;
 }
 
 .social-icon {
