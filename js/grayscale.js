@@ -73,15 +73,13 @@ $(function() {
       var currImage = 0;
 
       // Intro image shifting
-      var descriptions = ["a team", "learners", "builders", "planners", "coders", "cheerers", "workers", "knights", "doers", "technicians", "thinkers", "scouters", "2036"];
+      var descriptions = ["a team", "learners", "builders", "planners", "coders", "cheerers", "workers", "knights", "doers", "technicians", "thinkers", "scouters", "teachers", "innovators", "2036"];
 
       //shuffle that array
       descriptions = shuffle(descriptions);
 
-      //make sure it doesn't start with 2036 again
-      if(descriptions[0] === "2036") {
-        descriptions = descriptions.push(descriptions.shift());
-      }
+      //move "2036" to the end
+      descriptions.push(descriptions.splice(descriptions.indexOf("2036"), 1)[0]);
 
       $("#image-parallax").css("background-image", "url('img/new-intro/" + (descriptions[currImage]) +".jpg')");
 
