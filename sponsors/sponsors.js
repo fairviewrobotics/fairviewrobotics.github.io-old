@@ -6,18 +6,16 @@ var Sponsor = function(name, size, url) {
 
 var sponsors = [
   new Sponsor("Medtronic", 50, "http://medtronic.com"),
-  new Sponsor("Ball", 40, "http://www.ball.com/aerospace"),
-  new Sponsor("Neya Systems", 30, "http://neyasystems.com/"),
-  new Sponsor("Anker", 25, "https://www.anker.com/"),
-  new Sponsor("Spire", 30, "https://spire.com/"),
-  new Sponsor("Beaujos", 15, "http://www.beaujos.com/"),
-  new Sponsor("Cosmos", 15, "http://cosmospizza.com/"),
-  new Sponsor("PizzaRev", 10, "http://pizzarev.com/")
+  new Sponsor("McGuckin", 32, "https://www.mcguckin.com/"),
+  new Sponsor("Ball", 30, "http://www.ball.com/aerospace"),
+  new Sponsor("Google", 32, "https://www.google.com/"),
+  new Sponsor("Spire", 25, "https://spire.com/"),
+  new Sponsor("Madwire", 20, "https://www.madwire.com/"),
 ];
 
 $(document).ready(function() {
   for(var i = 0; i < sponsors.length; i++) {
     $("#sponsors-outer").append(
-      "<a class='sponsor' href='"+sponsors[i].url+"'><img src='logos/"+sponsors[i].name+".png' alt="+sponsors[i].name+" style='height: auto; width: "+sponsors[i].size+"vw;'/></a>");
+      "<a class='sponsor' href='"+sponsors[i].url+"'><img src='logos-2018/"+sponsors[i].name+".png' alt="+sponsors[i].name+" style='height: auto; width: "+sponsors[i].size+"vw;'/></a>");
   }
 });
