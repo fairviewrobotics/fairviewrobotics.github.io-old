@@ -111,18 +111,18 @@ p {
   justify-content: center;
 }
 
-.sponsors{
+.companies{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-a.sponsor{
+a.company{
   margin: 1em 1em 1em 1em;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-a.sponsor:hover > img{
+a.company:hover > img{
   visibility: hidden;
 }

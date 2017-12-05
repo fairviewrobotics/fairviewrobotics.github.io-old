@@ -932,7 +932,7 @@ footer p {
   flex-wrap: wrap;
 }
 
-#sponsors-outer {
+#companies-outer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -942,18 +942,18 @@ footer p {
   margin-right: auto;
 }
 
-.sponsor {
+.company {
   margin: 3vw;
   opacity: 0.8;
   transition: opacity 0.25s;
 }
 
-.sponsor:hover {
+.company:hover {
   opacity: 1;
 }
 
 @media(max-width:768px) {
-  .sponsor {
+  .company {
     margin: 15vw;
     transform: scale(1.8);
   }
