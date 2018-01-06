@@ -329,6 +329,33 @@ a:focus {
   z-index: 9;
 }
 
+#buildseasonbro-outer {
+  height: 3rem;
+  line-height: 2.8rem;
+  width: 37rem;
+  background-color: #b20202;
+  color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  border-top-left-radius: 10px;
+  right: 0;
+  bottom: 0;
+  transform: translateY(100px);
+  transition: transform 0.25s;
+  -webkit-transition: transform 0.25s;
+}
+
+#buildseasonbro-outer.shown {
+  transform: translateY(0);
+}
+
+#buildseasonbro-outer > a {
+  font-size: 1.4rem;
+  vertical-align: middle;
+  color: #fff;
+  text-decoration: underline;
+}
+
 #social-email {
   font-size: 1em;
   text-align: center;
@@ -401,6 +428,10 @@ a:focus {
     color: #fff;
 }
 
+#homepage-br {
+  display: none;
+}
+
 @media(max-width:768px) {
     .about-outer {
       width: 80% !important;
@@ -454,6 +485,14 @@ a:focus {
     .page-title {
       font-size: 15vw !important;
       top: calc(5vw + 50px) !important;
+    }
+
+    #homepage-br {
+      display: block;
+    }
+
+    #we-are {
+      font-size: 14vw;
     }
 }
 
