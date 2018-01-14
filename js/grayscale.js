@@ -69,14 +69,6 @@ $(function() {
     //Immediately check the window's scroll
     scrollAdjustments();
 
-    //show the build season bro message when voting is available
-    var d = new Date();
-    if(d.getTime() < 1516395600000) {
-      setTimeout(function(){
-        $("#buildseasonbro-outer").addClass("shown");
-      }, 500);
-    }
-
     setTimeout(function() {
       var currImage = 0;
 
