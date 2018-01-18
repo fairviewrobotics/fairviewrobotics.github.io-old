@@ -7,6 +7,7 @@ var Gallery = function(location, amount) {
 };
 
 var galleries = {
+  build2018: new Gallery("2018-build", 18),
   comp2017: new Gallery("2017-comp", 20),
   build2017: new Gallery("2017-build", 17),
   comp2016: new Gallery("2016-comp", 26),
@@ -15,7 +16,7 @@ var galleries = {
   offSeason: new Gallery("off-season", 12)
 };
 
-var selectedGal = galleries.comp2017;
+var selectedGal = galleries.build2018;
 
 var showImage = function(image, state) {
   if(state) {
