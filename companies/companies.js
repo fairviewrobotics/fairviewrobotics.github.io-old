@@ -14,6 +14,7 @@ var companies = [
   new Company("Madwire", 20, "https://www.madwire.com/"),
   new Company("NeyaSystems", 20, "http://neyasystems.com/"),
   new Company("Spire", 20, "https://spire.com/"),
+  new Company("Premier", 20, "https://www.pmcu.org/"),
   new Company("NIST", 20, "http://www.nist.gov/"),
   new Company("McGuckin", 20, "https://www.mcguckin.com/"),
   new Company("TheSink", 15, "https://thesink.com/")
