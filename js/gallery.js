@@ -6,7 +6,15 @@ var Gallery = function(location, amount) {
   this.amount = amount;
 };
 
+
+//to add a new gallery
+// - add a folder in the gallery and add your photos in there, from 0.jpg to maxnum.jpg
+// - resize photos in main folder so that their widths are 1280
+// - add a thumbnails folder in that main folder and copy all photos into inspect. make their widths 130
+// - add a variable to galleries and change selectedGal if you want
+// - add the new button to gallery/index.html
 var galleries = {
+  comp2018: new Gallery("2018-comp", 30),
   build2018: new Gallery("2018-build", 18),
   comp2017: new Gallery("2017-comp", 20),
   build2017: new Gallery("2017-build", 17),
@@ -16,7 +24,7 @@ var galleries = {
   offSeason: new Gallery("off-season", 12)
 };
 
-var selectedGal = galleries.build2018;
+var selectedGal = galleries.comp2018;
 
 var showImage = function(image, state) {
   if(state) {
