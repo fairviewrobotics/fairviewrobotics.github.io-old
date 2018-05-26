@@ -1,0 +1,31 @@
+.social-media-home {
+  height: 10vh;
+  width: 30vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  bottom: 2em;
+}
+
+.social-email {
+  font-size: 1em;
+  text-align: center;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 9vh;
+  position: absolute;
+  color: #000;
+}
+
+.social-email:hover {
+  color: #b20202;
+}
+
+@media(max-width:768px) {
+  .social-media-home /* todo #social-media-footer, #social-media-outer, #red-social-media-outer*/ {
+    width: 80vw;
+  }
+}
