@@ -17,11 +17,11 @@
   margin-right: auto;
   margin-top: 9vh;
   position: absolute;
-  color: #000;
+  color: var(--main-color);
 }
 
 .social-email:hover {
-  color: #b20202;
+  color: var(--second-color);
 }
 
 @media(max-width:768px) {
