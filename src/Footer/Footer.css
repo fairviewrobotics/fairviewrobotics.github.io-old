@@ -1,11 +1,19 @@
-.social-media-home {
+.social-media {
   height: 10vh;
   width: 30vw;
+}
+
+.absolute {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
   bottom: 2em;
+}
+
+.inline {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5em;
 }
 
 .social-email {
@@ -25,7 +33,7 @@
 }
 
 @media(max-width:768px) {
-  .social-media-home /* todo #social-media-footer, #social-media-outer, #red-social-media-outer*/ {
+  .social-media {
     width: 80vw;
   }
 }

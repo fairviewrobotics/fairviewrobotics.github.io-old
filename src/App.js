@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div>
         <Header isCollapsed={false} />
-        <Footer socialMedia={this.props.socialMedia}/>
+        <Footer fixed={true} socialMedia={this.props.socialMedia}/>
       </div>
     );
   }
