@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import * as bootstrapUtils from "react-bootstrap/lib/utils/bootstrapUtils";
 import { NavLink } from 'react-router-dom';
@@ -16,9 +17,15 @@ bootstrapUtils.addStyle(Navbar, 'none');
 
 class Header extends Component {
 
+  static propTypes = {
+    isCollapsed: PropTypes.bool.isRequired
+  };
+
   render() {
+    const collapsedStyling = this.props.isCollapsed ? 'top-nav-collapse' : null;
+
     return (
-      <Navbar collapseOnSelect fixedTop bsStyle="none" className="nav-custom">
+      <Navbar collapseOnSelect fixedTop bsStyle="none" className={`nav-custom ${collapsedStyling}`}>
         <Navbar.Header>
           <Navbar.Brand>
             <NavLink to="/">

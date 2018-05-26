@@ -63,4 +63,10 @@
     opacity: 1;
     transition: opacity 0.5s;
   }
+
+  .nav-custom.top-nav-collapse {
+    padding: 0;
+    border-bottom: 1px solid rgba(0,0,0,.3);
+    background: #fff;
+  }
 }
