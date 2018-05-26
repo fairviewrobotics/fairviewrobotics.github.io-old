@@ -1,0 +1,69 @@
+.nav-custom {
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(0,0,0,.3);
+  text-transform: uppercase;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #fff;
+}
+
+.nav-items {
+  margin-right: 10px;
+}
+
+.header-logo, .header-logo-white {
+  cursor: pointer;
+  width: 20%;
+  height: auto;
+  position: absolute;
+  left: -10px;
+  top: 13px;
+  opacity: 1;
+}
+
+#main-nav {
+  margin: 0 20px 0 0;
+}
+
+/* the --main-color is a css variable found in index.css */
+#main-nav a {
+  color: var(--main-color);
+}
+
+#main-nav a:hover,
+#main-nav li.active a {
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--second-color);
+}
+
+@media(max-width: 768px) {
+  .header-logo {
+    height: 45px;
+    top: 5px;
+    left: 1px;
+    width: auto;
+  }
+}
+
+@media(min-width: 768px) {
+  .nav-custom {
+    padding: 20px 0;
+    border-bottom: 0;
+    letter-spacing: 1px;
+    background: 0 0;
+    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    transition: background .5s ease-in-out,padding .5s ease-in-out;
+  }
+
+  .header-logo {
+    z-index: 1;
+    height: 90%;
+    width: auto;
+    position: absolute;
+    left: -10px;
+    top: 5%;
+    opacity: 1;
+    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+  }
+}
