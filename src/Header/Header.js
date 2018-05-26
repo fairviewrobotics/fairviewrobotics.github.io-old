@@ -10,7 +10,7 @@ import { faBars } from "@fortawesome/fontawesome-free-solid/shakable.es";
 
 import './Header.css';
 
-import logo from './logo.png';
+import logo from '../images/logo.png';
 
 // This remove the default styling from 'react-bootstrap' for the Navbar
 bootstrapUtils.addStyle(Navbar, 'none');
