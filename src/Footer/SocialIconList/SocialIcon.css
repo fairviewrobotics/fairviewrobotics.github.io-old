@@ -1,0 +1,16 @@
+.social-icon {
+  height: 1.5em;
+  width: 3em;
+  cursor: pointer;
+  background-size: auto 100%;
+  background: no-repeat center center;
+  opacity: 1;
+  transition: color 0.25s ease;
+  color: #171717;
+  font-size: 1.65em;
+  text-align: center;
+}
+
+.social-icon:hover {
+  color: #B10202;
+}
