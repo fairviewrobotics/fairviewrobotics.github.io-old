@@ -10,7 +10,7 @@
   margin-right: 10px;
 }
 
-.header-logo, .header-logo-white {
+.header-logo {
   cursor: pointer;
   width: 20%;
   height: auto;
@@ -50,8 +50,6 @@
     border-bottom: 0;
     letter-spacing: 1px;
     background: 0 0;
-    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
     transition: background .5s ease-in-out,padding .5s ease-in-out;
   }
 
@@ -64,6 +62,5 @@
     top: 5%;
     opacity: 1;
     transition: opacity 0.5s;
-    -webkit-transition: opacity 0.5s;
   }
 }
