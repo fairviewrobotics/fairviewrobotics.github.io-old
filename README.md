@@ -33,6 +33,6 @@ Run the deploy command: `npm run deploy`
 **NOTE:**
 
 NPM scripts that are [custom](https://stackoverflow.com/questions/36433461/how-do-i-add-a-custom-script-to-my-package-json-file-that-runs-a-javascript-file)
-need to start need to start like so `npm run COMMAND`
+need to start like so `npm run COMMAND`
 
 Also, the deploy command runs the build command then deploys using [gh-pages](https://github.com/tschaub/gh-pages#gh-pages) to push the build folder.
