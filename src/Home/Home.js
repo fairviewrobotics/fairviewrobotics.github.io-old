@@ -6,8 +6,6 @@ import './Home.css';
 
 import BackgroundImage from "../BackgroundImage/BackgroundImage";
 
-// TODO: add spinning loading svg to wait for all images to load
-// TODO: add code to check if images are loaded (https://forums.meteor.com/t/solved-how-to-determine-when-all-the-images-in-a-component-are-loaded-displayed/14297/5)
 export default class Home extends Component {
 
   static propTypes = {
@@ -22,13 +20,14 @@ export default class Home extends Component {
 
   static defaultProps = {
     shuffle: false,
-    timeActive: 1000,
+    timeActive: 5000,
     timeToFade: 2000
   };
 
   state = {
     items: this.props.shuffle ? shuffle(this.props.weAreItems) : this.props.weAreItems,
-    arrayPos: 0,
+    textPos: 0,
+    imagePos: 0,
     fadingOut: false,
     fadingIn: false
   };
@@ -46,29 +45,26 @@ export default class Home extends Component {
 
   loopWeAre = () => {
     this.loopInterval = setInterval(() => {
-      this.updateWeAre(this.state.items[this.state.arrayPos]);
+      this.updateWeAre(this.state.items[this.state.textPos]);
 
     }, this.props.timeActive + this.props.timeToFade);
   };
 
-  getNextArrayPos() {
-    let nextPos = this.state.arrayPos + 1;
+  getNextArrayPos(pos) {
+    let nextPos = pos + 1;
 
     if (nextPos >= this.state.items.length) {
-      if (this.props.shuffle) {
-        this.setState({ items: shuffle(this.state.items) })
-      }
       nextPos = 0;
     }
     return nextPos;
   }
 
   updateWeAre = () => {
-    this.setState({ fadingOut: true }); // fade out
+    this.setState({ fadingOut: true, imagePos: this.getNextArrayPos(this.state.imagePos) }); // fade out
 
     this.fadeOutTimeout = setTimeout(() => {
       this.setState({
-        arrayPos: this.getNextArrayPos(),
+        textPos: this.getNextArrayPos(this.state.textPos),
         fadingOut: false,
         fadingIn: true
       }); // start fade in
@@ -90,11 +86,15 @@ export default class Home extends Component {
       fadeClass = 'fading-out';
     }
 
-    const {name: weAre, src} = this.state.items[this.state.arrayPos];
+    const {name: weAre} = this.state.items[this.state.textPos];
+    const {src} = this.state.items[this.state.imagePos];
 
     return (
       <div>
-        <BackgroundImage fullScreen src={src} animate={{ duration: this.props.timeToFade / 2 }} />
+        <BackgroundImage fullScreen src={src} animate={{
+          duration: this.props.timeToFade / 2,
+          delay: this.props.timeToFade / 2
+        }} />
         <h1 className={`we-are ${fadeClass}`}>we are <span className="we-are-inner">{weAre}</span></h1>
       </div>
     );
