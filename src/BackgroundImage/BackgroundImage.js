@@ -9,7 +9,8 @@ export default class BackgroundImage extends PureComponent {
     src: PropTypes.string.isRequired,
     fullScreen: PropTypes.bool,
     animate: PropTypes.shape({
-      duration: PropTypes.number.isRequired
+      duration: PropTypes.number.isRequired,
+      delay: PropTypes.number.isRequired
     })
   };
 
@@ -32,6 +33,7 @@ export default class BackgroundImage extends PureComponent {
     const animationStyle = this.props.animate ?
       {
         transition: `background-image ${this.props.animate.duration}ms, background-size 0s`,
+        transitionDelay: `${this.props.animate.delay}ms`
       }
       :
       null;
