@@ -8,9 +8,9 @@ export default class BackgroundImage extends PureComponent {
   static propTypes = {
     src: PropTypes.string.isRequired,
     fullScreen: PropTypes.bool,
-    animate: PropTypes.objectOf(PropTypes.shape({
+    animate: PropTypes.shape({
       duration: PropTypes.number.isRequired
-    }))
+    })
   };
 
   static defaultProps = {
