@@ -15,8 +15,7 @@ export default class BackgroundImage extends PureComponent {
   };
 
   static defaultProps = {
-    fullScreen: false,
-    animate: false
+    fullScreen: false
   };
 
   render() {
