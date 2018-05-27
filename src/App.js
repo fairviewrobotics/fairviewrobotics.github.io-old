@@ -9,16 +9,26 @@ import NotFound from "./NotFound/NotFound";
 import Home from "./Home/Home";
 import About from "./About/About";
 import Calendar from "./Calendar/Calendar";
+import Sponsors from "./Sponsors/Sponsors";
+
+import { sponsors } from "./constants";
 
 function importAll(r) {
   return r.keys().map(r);
 }
 
-const images = importAll(require.context('./images/we-are/', false, /\.(png|jpe?g|svg)$/));
+const homePageImages = importAll(require.context('./images/we-are/', false, /\.(png|jpe?g|svg)$/));
 
-const items = images.map(src => ({
+const weAreItems = homePageImages.map(src => ({
   src,
   name: src.split('.')[0].split('/').slice(-1)[0]
+}));
+
+const sponsorImages = importAll(require.context('./images/sponsors/', false, /\.(png|jpe?g|svg)$/));
+
+const sponsorItems = sponsors.map(sponsor => ({
+  ...sponsor,
+  src: sponsorImages.find(image => image.includes(sponsor.name))
 }));
 
 class App extends Component {
@@ -56,9 +66,9 @@ class App extends Component {
           <Header isCollapsed={!this.state.isMainPage}/>
 
           <Switch>
-            <Route exact path="/" render={() => <Home shuffle weAreItems={items}/>}/>
+            <Route exact path="/" render={() => <Home shuffle weAreItems={weAreItems}/>}/>
             <Route exact path="/about" component={About}/>
-            <Route exact path="/sponsors" render={() => <h1>sponsors</h1>}/>
+            <Route exact path="/sponsors" render={() => <Sponsors sponsors={sponsorItems} />}/>
             <Route exact path="/gallery" render={() => <h1>gallery</h1>}/>
             <Route exact path="/calendar" component={Calendar}/>
 

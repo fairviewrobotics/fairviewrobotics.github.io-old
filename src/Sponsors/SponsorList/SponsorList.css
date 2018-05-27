@@ -1,0 +1,12 @@
+#companies-outer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  /* TODO: make BackgroundImage inline so margin-top is not needed */
+  margin-top: 25vw;
+}

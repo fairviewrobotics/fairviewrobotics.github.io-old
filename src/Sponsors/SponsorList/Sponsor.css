@@ -1,0 +1,16 @@
+.company {
+  margin: 3vw;
+  opacity: 0.8;
+  transition: opacity 0.25s;
+}
+
+.company:hover {
+  opacity: 1;
+}
+
+@media(max-width:768px) {
+  .company {
+    margin: 15vw;
+    transform: scale(1.8);
+  }
+}
