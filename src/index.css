@@ -15,10 +15,6 @@ body {
   overflow-x: hidden;
 }
 
-body.noscroll {
-  overflow: hidden !important;
-}
-
 html {
   width: 100%;
   height: 100%;
@@ -51,8 +47,6 @@ p {
 
 a {
   color: var(--second-color);
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
