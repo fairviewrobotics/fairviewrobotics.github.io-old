@@ -1,0 +1,39 @@
+#image-parallax {
+  height: calc(100% + 100px);
+  width: 100%;
+  top: -100px;
+  position: fixed;
+  z-index: -1;
+  background: black 50% 0;
+  background-size: cover;
+  transition: background-image 1s, background-size 0s;
+  transition-delay: 2s;
+}
+
+#image-parallax.not-fullscreen {
+  height: calc(25vw + 100px) !important;
+}
+
+.intro-mask {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.intro-mask.not-fullscreen {
+  height: calc(25vw) !important;
+}
+
+@media(max-width:768px) {
+  #image-parallax.not-fullscreen {
+    height: calc(35vw + 100px) !important;
+  }
+
+  .intro-mask.not-fullscreen {
+    height: calc(35vw) !important;
+  }
+}
