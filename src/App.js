@@ -6,6 +6,18 @@ import RouteChange from "./RouteChange";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import NotFound from "./NotFound/NotFound";
+import Home from "./Home/Home";
+
+function importAll(r) {
+  return r.keys().map(r);
+}
+
+const images = importAll(require.context('./images/we-are/', false, /\.(png|jpe?g|svg)$/));
+
+const items = images.map(src => ({
+  src,
+  name: src.split('.')[0].split('/').slice(-1)[0]
+}));
 
 class App extends Component {
 
@@ -21,6 +33,7 @@ class App extends Component {
   };
 
   handleRouteChange = ({ pathname }) => {
+    // TODO: simpfly to pathname !== '/', but fix not found page
     if (this.state.isMainPage && (
       pathname === '/about' ||
       pathname === '/sponsors' ||
@@ -41,7 +54,7 @@ class App extends Component {
           <Header isCollapsed={!this.state.isMainPage}/>
 
           <Switch>
-            <Route exact path="/" render={() => <h1>Home</h1>}/>
+            <Route exact path="/" render={() => <Home shuffle weAreItems={items}/>}/>
             <Route exact path="/about" render={() => <h1>About</h1>}/>
             <Route exact path="/sponsors" render={() => <h1>sponsors</h1>}/>
             <Route exact path="/gallery" render={() => <h1>gallery</h1>}/>
