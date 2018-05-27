@@ -8,6 +8,7 @@ import Footer from "./Footer/Footer";
 import NotFound from "./NotFound/NotFound";
 import Home from "./Home/Home";
 import About from "./About/About";
+import Calendar from "./Calendar/Calendar";
 
 function importAll(r) {
   return r.keys().map(r);
@@ -59,7 +60,7 @@ class App extends Component {
             <Route exact path="/about" component={About}/>
             <Route exact path="/sponsors" render={() => <h1>sponsors</h1>}/>
             <Route exact path="/gallery" render={() => <h1>gallery</h1>}/>
-            <Route exact path="/calendar" render={() => <h1>Calendar</h1>}/>
+            <Route exact path="/calendar" component={Calendar}/>
 
             <Route component={NotFound} />
           </Switch>
