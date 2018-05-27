@@ -8,7 +8,7 @@ This is a react application and thus is a single page app, to learn more look at
 
 ## Usage
 
-###### How the heck I am supposed to run this?
+#### How the heck am I supposed to run this?
 
 This project uses npm (node package manager). NPM downloads libraries that we can use, saving us loads of time.
 Checkout [this stack overflow question](https://stackoverflow.com/questions/31930370/what-is-npm-and-why-do-i-need-it) for a quick answer
@@ -26,7 +26,7 @@ Then run the dev server: `npm start`
 
 Done!
 
-###### How do I deploy to github pages?
+#### How do I deploy to github pages?
 
 Run the deploy command: `npm run deploy`
 
@@ -35,4 +35,4 @@ Run the deploy command: `npm run deploy`
 NPM scripts that are [custom](https://stackoverflow.com/questions/36433461/how-do-i-add-a-custom-script-to-my-package-json-file-that-runs-a-javascript-file)
 need to start like so `npm run COMMAND`
 
-Also, the deploy command runs the build command then deploys using [gh-pages](https://github.com/tschaub/gh-pages#gh-pages) to push the build folder.
+Also, the deploy command runs the build command (`npm run build`) then deploys the build folder using [gh-pages](https://github.com/tschaub/gh-pages#gh-pages) up to the gh-pages branch.
