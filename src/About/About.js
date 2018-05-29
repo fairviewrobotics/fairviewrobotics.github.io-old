@@ -4,13 +4,13 @@ import './About.css';
 
 import backgroundImage from '../images/intro/9.jpg';
 
-import comp2016_7 from '../images/2016-comp/7.jpg';
+import comp2016_7 from '../images/2016-comp/2016-comp-7.jpg';
 
-import comp2017_20 from '../images/2017-comp/20.jpg';
-import comp2017_11 from '../images/2017-comp/11.jpg';
+import comp2017_20 from '../images/2017-comp/2017-comp-20.jpg';
+import comp2017_11 from '../images/2017-comp/2017-comp-11.jpg';
 
-import build2017_5 from '../images/2017-build/5.jpg';
-import build2017_2 from '../images/2017-build/2.jpg';
+import build2017_5 from '../images/2017-build/2017-build-5.jpg';
+import build2017_2 from '../images/2017-build/2017-build-2.jpg';
 import BackgroundImage from "../BackgroundImage/BackgroundImage";
 
 // TODO: CHANGE TITLE
