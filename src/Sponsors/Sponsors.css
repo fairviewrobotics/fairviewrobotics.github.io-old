@@ -1,0 +1,12 @@
+/* TODO: link to page css */
+.page-title {
+  position: absolute;
+  font-size: 10vw;
+  font-weight: 100;
+  text-align: center;
+  display: block;
+  left: 0;
+  right: 0;
+  top: calc(5vw + 50px);
+  color: #000;
+}

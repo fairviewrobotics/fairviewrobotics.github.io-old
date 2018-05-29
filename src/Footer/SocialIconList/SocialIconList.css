@@ -1,0 +1,15 @@
+.social-media-list {
+  display: flex;
+  position: absolute;
+  height: 10vh;
+  width: 30vw;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 10;
+}
+
+@media(max-width:768px) {
+  .social-media-list {
+    width: 80vw;
+  }
+}

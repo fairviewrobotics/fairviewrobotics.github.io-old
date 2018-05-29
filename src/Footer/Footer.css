@@ -1,0 +1,39 @@
+.social-media {
+  height: 10vh;
+  width: 30vw;
+}
+
+.absolute {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2em;
+}
+
+.inline {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5em;
+}
+
+.social-email {
+  font-size: 1em;
+  text-align: center;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 9vh;
+  position: absolute;
+  color: var(--main-color);
+}
+
+.social-email:hover {
+  color: var(--second-color);
+}
+
+@media(max-width:768px) {
+  .social-media {
+    width: 80vw;
+  }
+}

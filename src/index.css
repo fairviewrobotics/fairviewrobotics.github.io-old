@@ -1,0 +1,57 @@
+@import 'http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic';
+@import 'http://fonts.googleapis.com/css?family=Montserrat:400,700';
+
+:root {
+  --main-color: #171717;
+  --second-color: #9a1f24;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: var(--main-color);
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.page-scroll {
+  width: auto;
+  height: auto;
+  z-index: 100;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 35px;
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+p {
+  margin: 0 0 25px;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--second-color);
+  transition: all .2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: var(--second-color);
+}
