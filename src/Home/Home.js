@@ -20,7 +20,7 @@ export default class Home extends Component {
 
   static defaultProps = {
     shuffle: false,
-    timeActive: 5000,
+    timeActive: 2000,
     timeToFade: 2000
   };
 
