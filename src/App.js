@@ -10,9 +10,11 @@ import Home from "./Home/Home";
 import About from "./About/About";
 import Calendar from "./Calendar/Calendar";
 import Sponsors from "./Sponsors/Sponsors";
+import Gallery from "./Gallery/Gallery";
 
-import { sponsors } from "./constants";
+import { sponsors, galleries } from "./constants";
 
+// TODO move into constants
 function importAll(r) {
   return r.keys().map(r);
 }
@@ -69,7 +71,7 @@ class App extends Component {
             <Route exact path="/" render={() => <Home shuffle weAreItems={weAreItems}/>}/>
             <Route exact path="/about" component={About}/>
             <Route exact path="/sponsors" render={() => <Sponsors sponsors={sponsorItems} />}/>
-            <Route exact path="/gallery" render={() => <h1>gallery</h1>}/>
+            <Route exact path="/gallery" render={() => <Gallery galleries={galleries}/>}/>
             <Route exact path="/calendar" component={Calendar}/>
 
             <Route component={NotFound} />
