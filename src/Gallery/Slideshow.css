@@ -1,0 +1,108 @@
+/* TODO: rename image to slideshow */
+
+#image-full-outer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  padding: 0;
+  z-index: 1000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.image-container {
+  display: flex;
+  height: 90%;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s;
+}
+
+.loading-text {
+  margin: auto 0;
+  text-align: center;
+}
+
+.image-full {
+  max-height: 100%;
+  max-width: 100%;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+#image-full-close {
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0.8;
+  cursor: pointer;
+  color: #000;
+  transition: none;
+}
+
+#image-full-close:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+#image-full-outer.non-bootstrap-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.full-arrow {
+  font-size: 150px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--main-color);
+  opacity: 0.8;
+  cursor: pointer;
+  transition: none;
+}
+
+.left-arrow {
+  left: 15px;
+}
+
+.right-arrow {
+  right: 15px;
+}
+
+.full-arrow:hover {
+  opacity: 1;
+  color: var(--main-color);
+}
+
+@media(max-width:768px)  {
+  .full-arrow {
+    /* TODO: make more dynamic */
+    font-size: 75px;
+  }
+}
+
+.image-thumb-outer {
+  border: 2px solid #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  height: auto;
+  width: auto;
+  margin: 15px;
+  cursor: pointer;
+  display: inline-block;
+  transition: border 0.2s;
+  -webkit-transition: border 0.2s;
+}
+
+.image-thumb-outer:hover {
+  border: 2px solid #b2020;
+}
